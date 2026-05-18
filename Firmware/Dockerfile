@@ -4,8 +4,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 ARG CORE_VERSION=2.0.2
 
-ARG FIRMWARE_VERSION_MAJOR=99
-ARG FIRMWARE_VERSION_MINOR=99
+ARG FIRMWARE_VERSION_MAJOR=100
+ARG FIRMWARE_VERSION_MINOR=1
 
 # ESP32 Core Debug Level
 # We use "none" for releases and "error" for release_candidate
@@ -56,6 +56,21 @@ RUN arduino-cli core install "esp32:esp32@${CORE_VERSION}"
 RUN arduino-cli lib install ArduinoJson@6.19.4
 RUN arduino-cli lib install ESP32Time@2.0.0
 RUN arduino-cli lib install ESP32_BleSerial@1.0.5
+
+# [Stiple v100] Patch ESP32_BleSerial@1.0.5 for universal iOS/Android BLE compat:
+# 1. Drop ESP_GATT_PERM_*_ENCRYPTED — removes pairing requirement (fragile across iOS devices)
+# 2. Add RX setWriteNoResponseProperty — fast fire-and-forget write path
+# Recipe verified from sparkfun/ESP32_BleSerial fork (RTK_Everywhere firmware).
+RUN sed -i 's|TxCharacteristic->setAccessPermissions(ESP_GATT_PERM_READ_ENCRYPTED);|// [Stiple] TxCharacteristic->setAccessPermissions(ESP_GATT_PERM_READ_ENCRYPTED); // no pairing required|' \
+    /root/Arduino/libraries/ESP32_BleSerial/src/BleSerial.cpp \
+ && sed -i 's|RxCharacteristic->setAccessPermissions(ESP_GATT_PERM_WRITE_ENCRYPTED);|// [Stiple] RxCharacteristic->setAccessPermissions(ESP_GATT_PERM_WRITE_ENCRYPTED); // no pairing required|' \
+    /root/Arduino/libraries/ESP32_BleSerial/src/BleSerial.cpp \
+ && sed -i 's|RxCharacteristic->setWriteProperty(true);|RxCharacteristic->setWriteProperty(true);\n\tRxCharacteristic->setWriteNoResponseProperty(true); // [Stiple] fast write path for iOS/Android|' \
+    /root/Arduino/libraries/ESP32_BleSerial/src/BleSerial.cpp
+
+# [Stiple v100] Verify patches landed — fail build loudly if upstream lib shifts string fragments.
+RUN grep -q "setWriteNoResponseProperty" /root/Arduino/libraries/ESP32_BleSerial/src/BleSerial.cpp \
+ && ! grep -E "^[^/]*setAccessPermissions\(ESP_GATT_PERM_(READ|WRITE)_ENCRYPTED\)" /root/Arduino/libraries/ESP32_BleSerial/src/BleSerial.cpp
 RUN arduino-cli lib install "ESP32-OTA-Pull"@1.0.0
 RUN arduino-cli lib install Ethernet@2.0.2
 RUN arduino-cli lib install JC_Button@2.1.2

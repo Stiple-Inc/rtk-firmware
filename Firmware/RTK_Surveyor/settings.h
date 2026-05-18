@@ -89,13 +89,13 @@ typedef enum
 ProductVariant productVariant = RTK_SURVEYOR;
 
 const char *const productDisplayNames[] = {
-    "Surveyor",
-    "Express",
-    "Facet",
-    "Express+",
-    "Facet LB",
-    "Ref Stn",
-    "Facet LD",
+    "Stiple",
+    "Stiple",
+    "Stiple",
+    "Stiple",
+    "Stiple",
+    "Stiple",
+    "Stiple",
     // Add new values just above this line
     "Unknown",
 };
@@ -115,13 +115,13 @@ const char *const platformFilePrefixTable[] = {
 const int platformFilePrefixTableEntries = sizeof(platformFilePrefixTable) / sizeof(platformFilePrefixTable[0]);
 
 const char *const platformPrefixTable[] = {
-    "Surveyor",
-    "Express",
-    "Facet",
-    "Express Plus",
-    "Facet L-Band",
-    "Reference Station",
-    "Facet L-Band Direct",
+    "Stiple",
+    "Stiple",
+    "Stiple",
+    "Stiple",
+    "Stiple",
+    "Stiple",
+    "Stiple",
     // Add new values just above this line
     "Unknown",
 };
@@ -1037,7 +1037,7 @@ typedef struct
     uint8_t espnowPeers[5][6] = {0}; // Max of 5 peers. Contains the MAC addresses (6 bytes) of paired units
     uint8_t espnowPeerCount = 0;
     bool enableRtcmMessageChecking = false;
-    BluetoothRadioType_e bluetoothRadioType = BLUETOOTH_RADIO_SPP;
+    BluetoothRadioType_e bluetoothRadioType = BLUETOOTH_RADIO_BLE; // [Stiple v100] default to BLE — Mapdesk requires BLE writeWithoutResponse path
     bool runLogTest = false;           // When set to true, device will create a series of test logs
     bool espnowBroadcast = true;       // When true, overrides peers and sends all data via broadcast
     int16_t antennaHeight = 0;         // in mm

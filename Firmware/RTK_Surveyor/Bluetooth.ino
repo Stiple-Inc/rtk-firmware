@@ -164,15 +164,7 @@ void bluetoothStart()
         char productName[50] = {0};
         strncpy(productName, platformPrefix, sizeof(productName));
 
-        // BLE is limited to ~28 characters in the device name. Shorten platformPrefix if needed.
-        if (settings.bluetoothRadioType == BLUETOOTH_RADIO_BLE)
-        {
-            if (strcmp(productName, "Facet L-Band Direct") == 0)
-            {
-                strncpy(productName, "Facet L-Band", sizeof(productName));
-            }
-        }
-
+        // [Stiple v100] removed Facet L-Band Direct truncation — all variants share 6-char "Stiple" prefix, well within BLE 28-char limit.
         snprintf(deviceName, sizeof(deviceName), "%s %s%02X%02X", productName, stateName, btMACAddress[4],
                  btMACAddress[5]);
 

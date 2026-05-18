@@ -45,11 +45,16 @@
     true // This enable specials developer modes (don't check power button at startup). Passed in from compiler flags.
 #endif  // ENABLE_DEVELOPER
 
-// This is passed in from compiler extra flags
-#ifndef POINTPERFECT_TOKEN
-#define FIRMWARE_VERSION_MAJOR 99
-#define FIRMWARE_VERSION_MINOR 99
-#endif  // POINTPERFECT_TOKEN
+// Versions are passed in from compiler extra flags via Dockerfile.
+// [Stiple v100] explicit per-symbol guards so a non-Docker compile still reports 100.1
+// (the previous POINTPERFECT_TOKEN proxy guard collapsed both versions to 99/99 if the token
+// was provided but FIRMWARE_VERSION_* were not).
+#ifndef FIRMWARE_VERSION_MAJOR
+#define FIRMWARE_VERSION_MAJOR 100
+#endif
+#ifndef FIRMWARE_VERSION_MINOR
+#define FIRMWARE_VERSION_MINOR 1
+#endif
 
 // Define the RTK board identifier:
 //  This is an int which is unique to this variant of the RTK Surveyor hardware which allows us

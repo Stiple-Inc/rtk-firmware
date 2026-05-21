@@ -37,10 +37,10 @@ Repair Parts:
 
 Tools Needed:
 
-* [Small Philips Head Screwdriver](https://www.sparkfun.com/products/9146)
-* [Curved Tweezers](https://www.sparkfun.com/products/10602)
-* [U.FL Puller](https://www.sparkfun.com/products/20687) - *Recommended*
-* [Wire Cutters](https://www.sparkfun.com/products/10447) - *Recommended*
+- [Small Philips Head Screwdriver](https://www.sparkfun.com/products/9146)
+- [Curved Tweezers](https://www.sparkfun.com/products/10602)
+- [U.FL Puller](https://www.sparkfun.com/products/20687) - _Recommended_
+- [Wire Cutters](https://www.sparkfun.com/products/10447) - _Recommended_
 
 ## Opening Facet
 
@@ -66,7 +66,7 @@ Note the antenna orientation so that it can be re-mounted in the same way. A sha
 
 ![image](https://github.com/user-attachments/assets/2d3c4f1e-6d20-4b78-9bcf-5399af5d2093)
 
-Remove the four screws holding the antenna in place. 
+Remove the four screws holding the antenna in place.
 
 ![Antenna to the side](img/Repair/SparkFun-RTK-Repair-5.jpg)
 
@@ -74,7 +74,7 @@ The antenna will be attached to the main board and must stay that way for the ne
 
 ![Remove battery boat](img/Repair/SparkFun-RTK-Repair-6.jpg)
 
-The battery and vertical PCBs are held in place using a retention PCB. Remove the four screws holding the PCB in place and lift off the foam top of the battery holder. 
+The battery and vertical PCBs are held in place using a retention PCB. Remove the four screws holding the PCB in place and lift off the foam top of the battery holder.
 
 **Note:** v1.0 of the retention plate is not symmetrical. Meaning, if the plate is installed in reverse, the retention PCB will be just short of the connector board and will not properly hold it in place. Reinstall the retention plate as shown in the picture.
 
@@ -92,7 +92,7 @@ This is the most dangerous step. The cable connecting the antenna to the main bo
 
 Using the U.FL removal tool, slide the tool onto the U.FL connector and gently pull away from the main board. If it won't give, you may need to angle the tool slightly while pulling.
 
-**Note:** If you do not have a U.FL tool this [tutorial on U.FL connectors](https://learn.sparkfun.com/tutorials/three-quick-tips-about-using-ufl/all#disconnect) has three alternative methods using tweezers, wire cutters, and a skinny PCB that may also work. 
+**Note:** If you do not have a U.FL tool this [tutorial on U.FL connectors](https://learn.sparkfun.com/tutorials/three-quick-tips-about-using-ufl/all#disconnect) has three alternative methods using tweezers, wire cutters, and a skinny PCB that may also work.
 
 ![U.FL connector removed](img/Repair/SparkFun-RTK-Repair-9.jpg)
 
@@ -116,7 +116,7 @@ The main board is attached to the battery and the connector board. Lift the main
 
 **Note:** This step is not needed for general repair. Only disconnect the battery if you are replacing the battery.
 
-The battery is plugged into the mainboard using a JST connector. These are very strong connectors. *Do not* pull on the wires. We recommend using the mouth of wire cutters (also known as diagonal cutters) to pry the connector sideways. 
+The battery is plugged into the mainboard using a JST connector. These are very strong connectors. _Do not_ pull on the wires. We recommend using the mouth of wire cutters (also known as diagonal cutters) to pry the connector sideways.
 
 Once removed, the battery can be set aside.
 
@@ -148,7 +148,7 @@ Remove the backing from the new overlay. Stick the overlay into the center of th
 
 Be sure to flip up the arm on the overlay connector before trying to insert the new overlay FPC.
 
-Using tweezers, and holding the FPC by the cable stiffener, insert the overlay FPC into the display board. 
+Using tweezers, and holding the FPC by the cable stiffener, insert the overlay FPC into the display board.
 
 ![Modern display board with 6-pin friction connector](img/Repair/RTK-Facet-Repair-3.jpg)
 
@@ -172,7 +172,7 @@ Slide the main board and connector boards back into place along with the battery
 
 ![Handling FPCs](img/Repair/SparkFun-RTK-Repair-11.jpg)
 
-Reconnect the display board to the main board. Be sure to close the arm on the main board to secure the FPC in place. 
+Reconnect the display board to the main board. Be sure to close the arm on the main board to secure the FPC in place.
 
 ## Testing the Overlay
 
@@ -186,7 +186,7 @@ Press and hold the internal power button to power down the unit.
 
 ![Using overlay power button](img/Repair/SparkFun-RTK-Repair-26.jpg)
 
-Repeat the process using the overlay button to verify the external power button is working. 
+Repeat the process using the overlay button to verify the external power button is working.
 
 If the external overlay button is not working, but the internal button is, remove and reinsert the FPC connecting the overlay to the display board.
 
@@ -206,11 +206,11 @@ Place the retention plate and foam over the battery. The battery may need to be 
 
 **Note:** v1.0 of the retention plate is not symmetrical. Meaning, if the plate is installed in reverse, the retention PCB will be just short of the connector board and will not properly hold it in place. Reinstall the retention plate as shown in the picture above.
 
-Secure the retention plate with the four *small* screws.
+Secure the retention plate with the four _small_ screws.
 
 ![Reattach antenna](img/Repair/SparkFun-RTK-Repair-4.jpg)
 
-Place the antenna over top of the retention plate in the same orientation as it was removed. Secure in place with the four *large* screws.
+Place the antenna over top of the retention plate in the same orientation as it was removed. Secure in place with the four _large_ screws.
 
 ![Dome showing the front tooth](img/Repair/SparkFun-RTK-Repair-3.jpg)
 
@@ -218,7 +218,7 @@ Plate the dome over the antenna with the front 'tooth' aligning over the display
 
 ![Insert four screws into dome](img/Repair/SparkFun-RTK-Repair-2.jpg)
 
-Secure the dome in place using four *small* screws.
+Secure the dome in place using four _small_ screws.
 
 Replace the silicone boot around the device.
 
@@ -228,22 +228,20 @@ Power on the RTK Facet and take outside to confirm SIV reaches above ~20 satelli
 
 Taking the Reference Station apart is really easy:
 
-* Disconnect all cables
+- Disconnect all cables
 
-* Unplug the green 10-way 3.5mm I/O connector
-    * This makes it easy to remove the main PCB from the enclosure
-    * The connector is a firm fit. You may need to rock it from side to side as you unplug it
-  
-* Unscrew the four screws holding the front panel in place
-    * We recommend removing the front panel first, so you can unplug the OLED display
-  
-* Remove the front panel
+- Unplug the green 10-way 3.5mm I/O connector
+  - This makes it easy to remove the main PCB from the enclosure
+  - The connector is a firm fit. You may need to rock it from side to side as you unplug it
+- Unscrew the four screws holding the front panel in place
+  - We recommend removing the front panel first, so you can unplug the OLED display
+- Remove the front panel
 
 ![Image of the Reference Station with the front panel removed](img/Repair/Ref_Station_Disassembly.png)
 
-* Unplug the OLED Qwiic cable
+- Unplug the OLED Qwiic cable
 
-* Slide out the main PCB
+- Slide out the main PCB
 
 ## Surveyor
 
@@ -252,7 +250,3 @@ Disassembly of the RTK Surveyor is achieved by removing two Philips head screws 
 ![Internal Surveyor Switches](img/Repair/RTK_Surveyor_Internal_-_NMEA_Switches.jpg)
 
 Within the RTK Surveyor, two internal slide switches control the flow of NMEA data over Bluetooth and should be in the position shown above. If these switches get moved, the device will fail to correctly push NMEA data over Bluetooth. Placing a bit of tape over the top of the switches can help keep them in place.
-
-
-
-

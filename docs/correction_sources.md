@@ -4,9 +4,9 @@ Surveyor: ![Feature Supported](img/Icons/GreenDot.png) / Express: ![Feature Supp
 
 To achieve an RTK Fix, SparkFun RTK products must be provided with a correction source. This correction data, sometimes called RTCM (see [What is RTCM?](https://learn.sparkfun.com/tutorials/what-is-gps-rtk/all#what-is-rtcm)), can be produced from a variety of sources.
 
-* [Paid Services](correction_sources.md#paid-services)
-* [Government Provided Corrections](correction_sources.md#government-provided-corrections)
-* [Permanent Base](correction_sources.md#permanent-base)
+- [Paid Services](correction_sources.md#paid-services)
+- [Government Provided Corrections](correction_sources.md#government-provided-corrections)
+- [Permanent Base](correction_sources.md#permanent-base)
 
 **Note:** In July of 2025 u-blox announced the L-Band service to North America would be discontinued on December 31st, 2025. **RTK Facet L-Band** units will continue to work after this date as high precision devices, but they will need to switch to an internet based correction services to obtain an RTK Fix.
 
@@ -14,13 +14,13 @@ To achieve an RTK Fix, SparkFun RTK products must be provided with a correction 
 
 These services cover entire countries and regions but charge a monthly fee. Easy to use, but the most expensive.
 
-* [PointOneNav](https://app.pointonenav.com/trial?src=sparkfun) ($50/month) - US, EU
-* [Onocoy](https://console.onocoy.com/explorer) ($25/month) - US, EU, Australia, and many other partial areas
-* [Skylark](https://www.swiftnav.com/skylark) ($29 to $69/month) - US, EU, Japan, Australia
-* [SensorCloud RTK](https://rtk.sensorcloud.com/pricing/) ($100/month) partial US, EU
-* [Premium Positioning](https://www.premium-positioning.com) (~$315/month) partial EU
-* [KeyNetGPS](https://www.keypre.com/KeynetGPS) ($375/month) North Eastern US
-* [Hexagon/Leica](https://hxgnsmartnet.com/en-US) ($500/month) - partial US, EU
+- [PointOneNav](https://app.pointonenav.com/trial?src=sparkfun) ($50/month) - US, EU
+- [Onocoy](https://console.onocoy.com/explorer) ($25/month) - US, EU, Australia, and many other partial areas
+- [Skylark](https://www.swiftnav.com/skylark) ($29 to $69/month) - US, EU, Japan, Australia
+- [SensorCloud RTK](https://rtk.sensorcloud.com/pricing/) ($100/month) partial US, EU
+- [Premium Positioning](https://www.premium-positioning.com) (~$315/month) partial EU
+- [KeyNetGPS](https://www.keypre.com/KeynetGPS) ($375/month) North Eastern US
+- [Hexagon/Leica](https://hxgnsmartnet.com/en-US) ($500/month) - partial US, EU
 
 Using PointOneNav is discussed in the [Quick Start guide](https://docs.sparkfun.com/SparkFun_RTK_Firmware/intro/#ntrip-example). We'll discuss using Skylark below. All services have the same basic interface: as long as the service has NTRIP, the SparkFun RTK product can use it.
 
@@ -28,39 +28,39 @@ Using PointOneNav is discussed in the [Quick Start guide](https://docs.sparkfun.
 
 ![Skylark coverage area](img/Corrections/Skylark-Coverage.png)
 
-*Skylark Coverage Area*
+_Skylark Coverage Area_
 
 A company called SwiftNav offers a service called [Skylark](https://www.swiftnav.com/skylark). As of writing, for $29 to $69 per month, you will get corrections covering North America, Europe, and the Asia Pacific. This is a very simple method for obtaining NTRIP corrections.
 
 ![Skylark website showing credentials](img/Corrections/SparkFun%20NTRIP%20Skylark%201%20-%20Credentials.png)
 
-Upon creating an account, you'll be issued NTRIP credentials that can immediately be used with Lefebure, SW Maps, or any GIS app that supports NTRIP. 
+Upon creating an account, you'll be issued NTRIP credentials that can immediately be used with Lefebure, SW Maps, or any GIS app that supports NTRIP.
 
 ![Entering credentials into SW maps](img/SWMaps/SparkFun%20NTRIP%20Skylark%202%20-%20SW%20Maps%20Credentials.png)
 
-*Entering credentials into SW maps*
+_Entering credentials into SW maps_
 
 The most difficult part of using Skylark for corrections is entering the auto-generated NTRIP Password. While we understand security is important, it's not trivial manually entering these types of credentials into a GIS application.
 
 ![GNSS Status showing positional accuracy](img/SWMaps/SparkFun%20NTRIP%20Skylark%202%20-%20SW%20Maps%20HPA.png)
 
-*SW Maps showing Positional Accuracy*
+_SW Maps showing Positional Accuracy_
 
 One downside is that with a 'regional' provider such as Skylark the distance to the correction station may be larger than 10km. While we've always gotten an RTK fix, we often see horizontal positional accuracy of ~30mm instead of the 14mm when using our fixed GNSS reference station. Your mileage may vary.
 
 **PointPerfect**
 
-PointPerfect is a correction service run by u-blox. While a few different types of services are offered by PointPerfect, we no longer recommend using PointPerfect for the older models including RTK Facet L-Band, RTK Facet, RTK Express, RTK Express Plus, or RTK Surveyor. Other correction services using NTRIP are easier to use with these models. The newer RTK models, including [RTK Torch](https://www.sparkfun.com/sparkfun-rtk-torch.html), [RTK Postcard](https://www.sparkfun.com/sparkfun-rtk-postcard.html), [RTK Facet mosaic](https://www.sparkfun.com/sparkpnt-rtk-facet-mosaic.html), and [RTK EVK](https://www.sparkfun.com/sparkfun-rtk-evk.html) *do* support **PointPerfect Flex NTRIP/RTCM**. More information can be found [here](https://docs.sparkfun.com/SparkFun_RTK_Everywhere_Firmware/menu_pointperfect/) for those devices.
+PointPerfect is a correction service run by u-blox. While a few different types of services are offered by PointPerfect, we no longer recommend using PointPerfect for the older models including RTK Facet L-Band, RTK Facet, RTK Express, RTK Express Plus, or RTK Surveyor. Other correction services using NTRIP are easier to use with these models. The newer RTK models, including [RTK Torch](https://www.sparkfun.com/sparkfun-rtk-torch.html), [RTK Postcard](https://www.sparkfun.com/sparkfun-rtk-postcard.html), [RTK Facet mosaic](https://www.sparkfun.com/sparkpnt-rtk-facet-mosaic.html), and [RTK EVK](https://www.sparkfun.com/sparkfun-rtk-evk.html) _do_ support **PointPerfect Flex NTRIP/RTCM**. More information can be found [here](https://docs.sparkfun.com/SparkFun_RTK_Everywhere_Firmware/menu_pointperfect/) for those devices.
 
 **Discontinuation of L-Band Service:** In July of 2025 u-blox announced the discontinuation of L-Band service to North America on December 31st, 2025. RTK Facet L-Band units will continue to work after this date as high precision devices, but they will need to switch to an internet based correction services to obtain an RTK Fix.
 
 ## Government Provided Corrections
 
-![Wisconsin network of CORS](<img/Corrections/SparkFun NTRIP 7 - Wisconsin Map.png>) 
+![Wisconsin network of CORS](<img/Corrections/SparkFun NTRIP 7 - Wisconsin Map.png>)
 
-*State Wide Network of Continuously Operating Reference Stations (CORS)*
+_State Wide Network of Continuously Operating Reference Stations (CORS)_
 
-Be sure to check if your state or country provides corrections for free. Many do! Currently, there are 21 states in the USA that provide this for free as a department of transportation service. Search ‘Wisconsin CORS’ as an example. Similarly, in France, check out [CentipedeRTK](https://docs.centipede.fr/). 
+Be sure to check if your state or country provides corrections for free. Many do! Currently, there are 21 states in the USA that provide this for free as a department of transportation service. Search ‘Wisconsin CORS’ as an example. Similarly, in France, check out [CentipedeRTK](https://docs.centipede.fr/).
 
 [![UNAVO map](img/Corrections/SparkFun%20NTRIP%204%20-%20UNAVCO%20Map.png)](https://www.unavco.org/instrumentation/networks/status/all/realtime)
 
@@ -76,39 +76,39 @@ There are several public networks across the globe, be sure to google around!
 
 ![SparkFun Base Station Enclosure](img/Corrections/Roof_Enclosure.jpg)
 
-*The base station at SparkFun*
+_The base station at SparkFun_
 
 A permanent base is a user-owned and operated base station. See [Creating a Permanent Base](permanent_base.md) for more information. A permanent base has the benefit of being the most accurate, with relatively low cost, but requires at least 24 hours of initial logging and some mechanical setup time (attaching the antenna, connecting a device to the internet, etc).
 
 ## Temporary Base
 
-[![Temporary RTK Express Base setup](img/Corrections/SparkFun_RTK_Express_-_Base_Radio.jpg)](img/Corrections/SparkFun_RTK_Express_-_Base_Radio - Big.jpg)
+[![Temporary RTK Express Base setup](img/Corrections/SparkFun_RTK_Express_-_Base_Radio.jpg)](img/Corrections/SparkFun*RTK_Express*-\_Base_Radio - Big.jpg)
 
-*Temporary RTK Express Base setup with serial radio*
+_Temporary RTK Express Base setup with serial radio_
 
-A temporary or mobile base setup is handy when you are in the field too far away from a correction source, or if your measurements do not require absolute accuracy. 
+A temporary or mobile base setup is handy when you are in the field too far away from a correction source, or if your measurements do not require absolute accuracy.
 
-To set up a temporary base, a 2nd RTK device is mounted to a tripod and it is configured to complete a survey-in (aka, locate itself). It will then begin broadcasting RTCM correction data. This data (~1000 bytes a second) is sent over a data link to one or multiple rovers that can then obtain RTK Fix. 
+To set up a temporary base, a 2nd RTK device is mounted to a tripod and it is configured to complete a survey-in (aka, locate itself). It will then begin broadcasting RTCM correction data. This data (~1000 bytes a second) is sent over a data link to one or multiple rovers that can then obtain RTK Fix.
 
-Any tripod with a ¼” camera thread will work. The [Amazon Basics tripod](https://www.amazon.com/AmazonBasics-Lightweight-Camera-Mount-Tripod/dp/B00XI87KV8) works well enough but is a bit lightweight and rickety. 
+Any tripod with a ¼” camera thread will work. The [Amazon Basics tripod](https://www.amazon.com/AmazonBasics-Lightweight-Camera-Mount-Tripod/dp/B00XI87KV8) works well enough but is a bit lightweight and rickety.
 
 For RTK products with an external antenna (ie, RTK Surveyor, RTK Express, RTK Express Plus) a cell phone holder is clamped to the tripod and the RTK device is held in the clamp. The ¼” camera thread is [adapted to ⅝” 11-TPI](https://www.sparkfun.com/products/17546) and an [L1/L2 antenna](https://www.sparkfun.com/products/17751) is attached. A [Male TNC to Male SMA adapter](https://www.sparkfun.com/products/17833) connects the antenna to the RTK device.
 
 Any of the RTK Products (excluding the RTK Express Plus) can be set up to operate in **Base** mode. Once the base has been set up with a clear view of the sky, turn on the RTK device.
 
-On the RTK Surveyor, toggle the *Setup* switch to **BASE**. The device will then enter either 'Fixed' or 'Survey-In' type **Base** mode depending on the system configuration. If the type has been set to Survey-In, the red BASE LED will blink while a survey-in is active. Once complete, the LED will turn solid red and begin transmitting RTCM out the **RADIO** port.
+On the RTK Surveyor, toggle the _Setup_ switch to **BASE**. The device will then enter either 'Fixed' or 'Survey-In' type **Base** mode depending on the system configuration. If the type has been set to Survey-In, the red BASE LED will blink while a survey-in is active. Once complete, the LED will turn solid red and begin transmitting RTCM out the **RADIO** port.
 
 ![RTK Facet in Survey-In Mode](img/Displays/SparkFun_RTK_Express_-_Display_-_Survey-In.jpg)
 
-*RTK device in Survey-In Mode*
+_RTK device in Survey-In Mode_
 
-On the RTK Facet, RTK Facet L-Band, and RTK Express press the **SETUP** button until *Base* is illuminated then stop pressing the Setup button. The device will then enter either 'Fixed' or 'Survey-In' type **Base** mode depending on the system configuration. If the type has been set to Survey-In, the display will show the Survey-In screen.
+On the RTK Facet, RTK Facet L-Band, and RTK Express press the **SETUP** button until _Base_ is illuminated then stop pressing the Setup button. The device will then enter either 'Fixed' or 'Survey-In' type **Base** mode depending on the system configuration. If the type has been set to Survey-In, the display will show the Survey-In screen.
 
-*Note:* Base mode is not possible on the RTK Express Plus.
+_Note:_ Base mode is not possible on the RTK Express Plus.
 
 ![External Serial Radio attached to the back of the RTK Express](img/Corrections/SparkFun_RTK_Surveyor_-_Radio.jpg)
 
-*External Serial Radio attached to the back of the RTK Express*
+_External Serial Radio attached to the back of the RTK Express_
 
 Once the survey is complete the device will begin producing RTCM correction data. If you are using a serial radio, data should start flowing across the link. RTK devices are designed to follow the u-blox recommended survey-in of 60 seconds and a mean 3D standard deviation of 5m of all fixes. If a survey fails to achieve these requirements it will auto-restart after 10 minutes.
 
@@ -118,12 +118,10 @@ If you’re shopping for a cell phone clamp be sure to get one that is compatibl
 
 Note: A mobile base station works well for quick trips to the field. However, the survey-in method is not recommended for the highest accuracy measurements because the positional accuracy of the base will directly translate to the accuracy of the rover. Said differently, if your base's calculated position is off by 100cm, so will every reading your rover makes. For many applications, such as surveying, this is acceptable since the Surveyor may only be concerned with measuring the lengths of property lines or features. If you’re looking for maximum accuracy consider installing a [permanent static base with a fixed antenna](permanent_base.md). We were able to pinpoint the antenna on the top of SparkFun with an incredible accuracy [+/-2mm of accuracy](img/Corrections/SparkFun_PPP_Results.png) using PPP!
 
-
-
 ## Other Sources
 
 There are a large number of networks run throughout the world. Be sure to dig a bit to find a local correction source near you.
 
 [![Map of RTK2Go Stations](img/Corrections/SparkFun%20NTRIP%205%20-%20RTK2Go%20Map.png)](http://monitor.use-snip.com/?hostUrl=rtk2go.com&port=2101)
 
-* RTK2go offers a [list](http://monitor.use-snip.com/?hostUrl=rtk2go.com&port=2101) and map (click 'View all' from the list) of stations using their public casting service. While none of these stations have been verified as accurate, it can be a decent starting point to do a 'quick' test of your system.
+- RTK2go offers a [list](http://monitor.use-snip.com/?hostUrl=rtk2go.com&port=2101) and map (click 'View all' from the list) of stations using their public casting service. While none of these stations have been verified as accurate, it can be a decent starting point to do a 'quick' test of your system.

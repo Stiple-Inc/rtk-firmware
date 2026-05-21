@@ -4,7 +4,7 @@ Surveyor: ![Feature Supported](img/Icons/GreenDot.png) / Express: ![Feature Supp
 
 ![SparkFun Base Station Enclosure](img/Corrections/Roof_Enclosure.jpg)
 
-*The base station at SparkFun*
+_The base station at SparkFun_
 
 This section goes into depth on how to gather the data using an RTK product to create a permanent fixed base.
 
@@ -14,42 +14,42 @@ This section goes into depth on how to gather the data using an RTK product to c
 
 ## Temporary vs. Fixed Base
 
-There are two types of bases: *Surveyed* and *Fixed*. A surveyed base is often a temporary base set up in the field. Called a 'Survey-In', this is less accurate but requires only 60 seconds to complete. The 'Fixed' base is much more accurate but the precise location at which the antenna is located must be known. A fixed base is often a structure with an antenna bolted to the side. Raw satellite signals are gathered for a few hours and then processed using Precision Point Position. 
+There are two types of bases: _Surveyed_ and _Fixed_. A surveyed base is often a temporary base set up in the field. Called a 'Survey-In', this is less accurate but requires only 60 seconds to complete. The 'Fixed' base is much more accurate but the precise location at which the antenna is located must be known. A fixed base is often a structure with an antenna bolted to the side. Raw satellite signals are gathered for a few hours and then processed using Precision Point Position.
 
 In a separate tutorial, we described how to [create a temporary base station](https://learn.sparkfun.com/tutorials/setting-up-a-rover-base-rtk-system) with the 1 to 10-minute survey-in method. The temporary base method is flexible, but it is not as accurate and can vary dramatically in the time required. The ZED-F9P has a much faster way to provide base corrections: if you know the location of your antenna, you can set the coordinates of the receiver and it will immediately start providing RTCM corrections. The problem is ‘what is the location of the antenna?’. It’s as if you need a soldering iron to assemble your [soldering iron kit](https://www.sparkfun.com/products/retired/10624). Where do we start?
 
-**Why don’t I just survey-in my fixed antenna to get its location?** 
+**Why don’t I just survey-in my fixed antenna to get its location?**
 
 While a survey-in is easy to set up and fine for an in-the-field way to establish the location of a base, it’s not recommended for getting the fixed location of a static base station as it is less accurate. Instead, PPP or Precise Point Positioning is far more accurate and is recommended for obtaining your antenna’s position. It’s a similar process but involves bouncing frick’n lasers off of satellites!
 
 > A major problem is that the predicted orbits are often off by one meter or more. Ground stations bounce lasers off the individual satellites as they pass overhead and use this new data to compute the actual orbits of the satellites. Using this new ephemeris data, when it becomes available, combined with the receiver’s raw data, better fixes can be computed. This is the basis of PPP.
 
-*From Gary Miller’s [PPP HOWTO](https://gpsd.gitlab.io/gpsd/ppp-howto.html)*
+_From Gary Miller’s [PPP HOWTO](https://gpsd.gitlab.io/gpsd/ppp-howto.html)_
 
 [![L1/L2 antenna attached to the roof](img/Corrections/Antenna_Semi-Fixed_to_roof.jpg)](img/Corrections/Antenna_Semi-Fixed_to_roof - Big.jpg)
 
-*[L1/L2 antenna](https://www.sparkfun.com/products/21801) semi-fixed to a flat roof*
+_[L1/L2 antenna](https://www.sparkfun.com/products/21801) semi-fixed to a flat roof_
 
 The PPP process works like this:
 
-* Install an antenna in a fixed location
-* Gather 24 hours' worth of raw GNSS data from that antenna
-* Pass the raw data to a processing center for PPP
-* Obtain a highly accurate position of the antenna we use to set a ‘Fixed Mode’ on a receiver
+- Install an antenna in a fixed location
+- Gather 24 hours' worth of raw GNSS data from that antenna
+- Pass the raw data to a processing center for PPP
+- Obtain a highly accurate position of the antenna we use to set a ‘Fixed Mode’ on a receiver
 
 There are some great articles written about PPP. We’ll scrape the surface but for more information check out:
 
-* Gary Miller’s great [PPP HOWTO](https://gpsd.gitlab.io/gpsd/ppp-howto.html)
-* Emlid’s [PPP](https://docs.emlid.com/reachm2/tutorials/post-processing-workflow/ppp-introduction/)
-* Suelynn Choy, [GNSS PPP](https://www.unoosa.org/documents/pdf/icg/2018/ait-gnss/16_PPP.pdf)
+- Gary Miller’s great [PPP HOWTO](https://gpsd.gitlab.io/gpsd/ppp-howto.html)
+- Emlid’s [PPP](https://docs.emlid.com/reachm2/tutorials/post-processing-workflow/ppp-introduction/)
+- Suelynn Choy, [GNSS PPP](https://www.unoosa.org/documents/pdf/icg/2018/ait-gnss/16_PPP.pdf)
 
 ## Affix Your Antenna
 
-You don’t want your antenna moving once you’ve determined its position. Consider investing in a [premium antenna](https://www.sparkfun.com/products/21801) but we’ve used the classic [u-blox L1/L2 antenna](https://www.sparkfun.com/products/15192) with good success. Mount the antenna to a proper ground plane on a fixed surface that has a very clear view of the sky. No nearby anything. 
+You don’t want your antenna moving once you’ve determined its position. Consider investing in a [premium antenna](https://www.sparkfun.com/products/21801) but we’ve used the classic [u-blox L1/L2 antenna](https://www.sparkfun.com/products/15192) with good success. Mount the antenna to a proper ground plane on a fixed surface that has a very clear view of the sky. No nearby anything.
 
 [![u-blox antenna on SparkFun parapet](img/Corrections/Base_Antenna_-_SparkFun_u-blox_Antenna1.jpg)](img/Corrections/Base_Antenna_-_SparkFun_u-blox_Antenna1.jpg)
 
-*The u-blox antenna attached to SparkFun’s parapet*
+_The u-blox antenna attached to SparkFun’s parapet_
 
 We mounted the [u-blox antenna](https://www.sparkfun.com/products/15192) to the ferrous flashing around the top of the SparkFun building. While not completely permanent, the magnets on the u-blox antenna are tested to survive automobile strength winds so it should be fine in the 100+ MPH winds experienced in the front range of Colorado. The u-blox ANN-MB-00 antenna has a 5m cable attached but this was not long enough to get from the SparkFun roof to the receiver so we attached a 10m SMA extension. It’s true that most L1/L2 antennas have a built-in amplifier but every meter of extension and every connector will slightly degrade the GNSS signal. Limit the use of connector converters and use an extension as short as possible to get where you need.
 
@@ -57,7 +57,7 @@ If you want to use a [higher-grade antenna](https://www.sparkfun.com/products/21
 
 [![An antenna on the roof attached to cinderblock](img/Corrections/Antenna_Semi-Fixed_to_roof.jpg)](img/Corrections/Antenna_Semi-Fixed_to_roof.jpg)
 
-*Yes, that’s a cinder block. Don’t laugh. It works!*
+_Yes, that’s a cinder block. Don’t laugh. It works!_
 
 Most surveying grade antennas have a ⅝” 11-TPI (threads per inch) thread on the bottom of the antenna. Luckily, ⅝” 11-TPI is the thread found on wedge anchors in hardware stores in the US. Wedge anchors are designed to hold walls to foundations but luckily for us, we can use the same hardware to anchor an antenna. (We’ve also heard of concrete anchors that use epoxy so be sure to shop around.)
 
@@ -67,11 +67,11 @@ I needed to mount an antenna to my roof. Luckily, I had two, leftover cinder blo
 
 ![Drilling a hole in the cinder block](img/Corrections/Base_Antenna_-_Drill.jpg)
 
-Step one is drilling the ⅝” hole into the cinder block. The masonry bit cost me $20 but cheaper, less fancy ones can be had for [less than $10](https://www.homedepot.com/p/Drill-America-5-8-in-x-4-in-Carbide-Tipped-Masonry-Drill-Bit-DAM4X5-8/305252434). The blue tape shows me the depth I’m trying to hit. The cinder block is 3.5” thick so I settled on ~2.5” deep. Once the hole is drilled, tip the block upside down to get most of the cement dust out. Then pound the anchor into place. 
+Step one is drilling the ⅝” hole into the cinder block. The masonry bit cost me $20 but cheaper, less fancy ones can be had for [less than $10](https://www.homedepot.com/p/Drill-America-5-8-in-x-4-in-Carbide-Tipped-Masonry-Drill-Bit-DAM4X5-8/305252434). The blue tape shows me the depth I’m trying to hit. The cinder block is 3.5” thick so I settled on ~2.5” deep. Once the hole is drilled, tip the block upside down to get most of the cement dust out. Then pound the anchor into place.
 
 ![A broken cinder block](img/Corrections/Base_Antenna_-_Broken_Block.jpg)
 
-*Oops!*
+_Oops!_
 
 Don’t get greedy! I pounded the anchor so far that it split the block. Luckily, I had a second block!
 
@@ -85,7 +85,7 @@ I used a 2nd bolt, tightened against the antenna base, to lock it into place and
 
 [![An antenna on the roof with Boulder Flatirons](img/Corrections/Antenna_Semi-Fixed_to_roof.jpg)](img/Corrections/Antenna_Semi-Fixed_to_roof.jpg)
 
-*It’s a bit of work getting 35lbs of concrete onto a roof but the view is pretty spectacular!*
+_It’s a bit of work getting 35lbs of concrete onto a roof but the view is pretty spectacular!_
 
 I wrapped the SMA extension once around the base. In case anything pulls on the SMA cable the tension will be transferred to the bolt rather than the TNC connection to the antenna.
 
@@ -93,13 +93,13 @@ I wrapped the SMA extension once around the base. In case anything pulls on the 
 
 ## Gather Raw GNSS Data
 
-Once you’ve got the antenna into a location where it *will not move or be moved* we need to establish its location. Power on your RTK unit and verify that you can get a lock and see 25+ satellites. Assuming you’ve got good reception, we now need to set the receiver to output raw data from the satellites. 
+Once you’ve got the antenna into a location where it _will not move or be moved_ we need to establish its location. Power on your RTK unit and verify that you can get a lock and see 25+ satellites. Assuming you’ve got good reception, we now need to set the receiver to output raw data from the satellites.
 
-You will need a microSD card that is 1GB up to 32GB formatted for FAT16 or FAT32. 
+You will need a microSD card that is 1GB up to 32GB formatted for FAT16 or FAT32.
 
 ![The microSD slot on the bottom of the RTK Facet](img/Corrections/SparkFun_RTK_Facet_-_Ports_-_microSD.jpg)
 
-*The microSD slot on the bottom of the RTK Facet*
+_The microSD slot on the bottom of the RTK Facet_
 
 **Enable RAWX and SFRBX**
 
@@ -107,13 +107,13 @@ Power on the unit and using the [serial](configure_with_serial.md) or [WiFi meth
 
 **Configure via WiFi**
 
-![Enable the RAWX message](img/WiFi Config/RTK_Surveyor_-_WiFi_Config_-_GNSS_Config_Messages.jpg)
+![Enable the RAWX message](img/WiFi Config/RTK*Surveyor*-_WiFi_Config_-\_GNSS_Config_Messages.jpg)
 
 Expand the Message Rates sub-menu under the GNSS Config menu. Pressing the NMEAx5 + RXMx2 message button will turn off all messages and enable the following messages:
 
-* NMEA-GGA, NMEA-SGA, NMEA-GST, NMEA-GSV, NMEA-RMC, RXM-RAWX, RXM-SFRBX
+- NMEA-GGA, NMEA-SGA, NMEA-GST, NMEA-GSV, NMEA-RMC, RXM-RAWX, RXM-SFRBX
 
-These seven sentences are commonly used when logging and doing Precise Point Positioning (PPP) or Post Processed Kinematics (PPK). 
+These seven sentences are commonly used when logging and doing Precise Point Positioning (PPP) or Post Processed Kinematics (PPK).
 
 Press the 'Save and Exit' button. Upon reset, the unit should begin displaying a gradually increasing [logging icon](displays.md#rover-fix) indicating successful logging.
 
@@ -121,23 +121,23 @@ Press the 'Save and Exit' button. Upon reset, the unit should begin displaying a
 
 ![Press 2 and then 8 to enable the PPP logging defaults](img/Terminal/SparkFun_RTK_Express_-_Messages_Menu.jpg)
 
-*Press 2 and then 8 to enable the PPP logging defaults*
+_Press 2 and then 8 to enable the PPP logging defaults_
 
 After enabling the NMEA and RXM messages, exit from the serial menu by pressing x repeatedly. The system will save and apply the settings.
 
-Once the RTK product is configured, power it up with microSD inserted, and leave the unit in **Rover** mode. This will record all the data (NMEA, UBX, and RAWX) from the receiver to a *.ubx file. We do not yet know the location of the antenna so we stay in Rover mode to allow it to compile a large amount of satellite data. Only after we have confirmed its location should you enter **Base** mode.
+Once the RTK product is configured, power it up with microSD inserted, and leave the unit in **Rover** mode. This will record all the data (NMEA, UBX, and RAWX) from the receiver to a \*.ubx file. We do not yet know the location of the antenna so we stay in Rover mode to allow it to compile a large amount of satellite data. Only after we have confirmed its location should you enter **Base** mode.
 
 ![The logging icon will remain animated while the log file is increasing](img/Displays/SparkFun_RTK_Facet_-_Main_Display_Icons.jpg)
 
-*The logging icon will remain animated while the log file is increasing*
+_The logging icon will remain animated while the log file is increasing_
 
 **Confirm Recording**
 
-Before leaving the unit for 6 to 24 hours, it is recommended that you capture a few minutes of RAWX log data, with the antenna located with a clear view of the sky, and then inspect the log to confirm everything is working correctly. 
+Before leaving the unit for 6 to 24 hours, it is recommended that you capture a few minutes of RAWX log data, with the antenna located with a clear view of the sky, and then inspect the log to confirm everything is working correctly.
 
 ![Getting UBX file from SD card](img/Corrections/SparkFun%20RTK%20Facet%20SD%20RAWX%20Log%20Files.png)
 
-*Getting UBX file from SD card*
+_Getting UBX file from SD card_
 
 Remove the microSD from the RTK unit and open it on a computer. The latest log file is shown above. Note the file shown above is 492kB because it logged only ~60 seconds. Log files with RAWX and SFRBX and NMEA will grow in size to over 1GB across 24 hours.
 
@@ -145,7 +145,7 @@ The quickest method to verify RAWX logging is to open the UBX file with a text e
 
 ![Viewing a RAWX log in a text editor](img/Corrections/SparkFun%20RTK%20Facet%20Text%20Editor%20RAWX%20packets.png)
 
-*NMEA and UBX binary data viewed in Visual Studio Code*
+_NMEA and UBX binary data viewed in Visual Studio Code_
 
 Your editor may render the binary UBX RAWX data in unknown ways. If you see NMEA ASCII sentences combined with large chunks of binary data, the RTK product is correctly logging RAWX data.
 
@@ -153,33 +153,33 @@ If you have u-center installed, you can more easily inspect for successful loggi
 
 ![Viewing a RAWX log in u-center](img/Corrections/SparkFun%20RTK%20Facet%20u-center%20view%20of%20Log%20Files.png)
 
-*Viewing a RAWX log in u-center*
+_Viewing a RAWX log in u-center_
 
 Press the play button (shown above) and you should see satellites quickly come in and out of view as u-center 'plays' back the log file.
 
 ![RAWX packet within the Packet Console](img/Corrections/SparkFun%20RTK%20Facet%20u-center%20RAWX%20packets.png)
 
-*RAWX packet within the Packet Console*
+_RAWX packet within the Packet Console_
 
 Open the Packet Console and verify the UBX RXM-RAWX and SFRBX packets are logged. You are now ready to do a long survey of the antenna's position. Allow this to run for 24 hours. Don’t worry if you go long but do realize that a 24-hour file will be ~1GB so don’t let it run for a month.
 
 ![Graph of record time vs position error](img/Corrections/PPP_record_time_vs_error.jpg)
 
-*From Suelynn Choy's ‘[GNSS Precision Point Positioning](https://www.unoosa.org/documents/pdf/icg/2018/ait-gnss/16_PPP.pdf)’ presentation 2018*
+_From Suelynn Choy's ‘[GNSS Precision Point Positioning](https://www.unoosa.org/documents/pdf/icg/2018/ait-gnss/16_PPP.pdf)’ presentation 2018_
 
-Capturing 6 hours is good, 24 is slightly better (note the logarithmic scale for position error in the graph above). Most PPP analysis services will accept more than 24 hours of data but they may truncate it to 24 hours. If you capture 30 hours of RAWX data, that’s ok, we will show you how to trim a file that is too long. 
+Capturing 6 hours is good, 24 is slightly better (note the logarithmic scale for position error in the graph above). Most PPP analysis services will accept more than 24 hours of data but they may truncate it to 24 hours. If you capture 30 hours of RAWX data, that’s ok, we will show you how to trim a file that is too long.
 
 ## Converting UBX to RINEX
 
 ![RTKLIB conversion of ubx to obs](img/Corrections/Convert_UBX_to_OBS_with_time_22_hour_window.jpg)
 
-Once the 24-hour log file is obtained, the 1GB UBX file will need to be converted to RINEX (Receiver Independent Exchange Format). The popular [RTKLIB](http://www.rtklib.com/) is here to help. We recommend the rtklibexplorer’s modified version of RTKLIB (available for download [here](http://rtkexplorer.com/downloads/rtklib-code/)) but you can obtain the original RTKLIB [here](http://www.rtklib.com/). Open RTKCONV. Select your UBX file and hit ‘Convert’. Our 300MB file took ~30 seconds to convert. You should see a *.obs file once complete.
+Once the 24-hour log file is obtained, the 1GB UBX file will need to be converted to RINEX (Receiver Independent Exchange Format). The popular [RTKLIB](http://www.rtklib.com/) is here to help. We recommend the rtklibexplorer’s modified version of RTKLIB (available for download [here](http://rtkexplorer.com/downloads/rtklib-code/)) but you can obtain the original RTKLIB [here](http://www.rtklib.com/). Open RTKCONV. Select your UBX file and hit ‘Convert’. Our 300MB file took ~30 seconds to convert. You should see a \*.obs file once complete.
 
 ![Opening an OBS file to view the start and stop time](img/Corrections/RTKCNV_-_OBS_Time_stamps1.jpg)
 
-*An OBS file with 14 hours of data*
+_An OBS file with 14 hours of data_
 
-If your data file is 25 hours or a little more, that’s fine. If you need to cut your RINEX file down because it’s too large (or 40 hours long) you can trim the time window. Convert the entire file then click on the notepad icon to open the OBS file. You’ll see the GPS start time and stop time for this capture. 
+If your data file is 25 hours or a little more, that’s fine. If you need to cut your RINEX file down because it’s too large (or 40 hours long) you can trim the time window. Convert the entire file then click on the notepad icon to open the OBS file. You’ll see the GPS start time and stop time for this capture.
 
 ![Limiting the time window of the conversion](img/Corrections/Convert_UBX_to_OBS_with_time_22_hour_window2.jpg)
 
@@ -189,7 +189,7 @@ Using these times, you can limit the time window to whatever you need and re-con
 
 The RTK products can log fix rates up to 20Hz. Why not get RAWX data at greater than 1Hz? Because nature doesn’t move that fast. Most PPP analysis services will ignore anything greater than 1Hz. OPUS goes so far as to “decimate all recording rates to 30 seconds”. And, your OBS files will be monstrously large. If 24 hours is 1GB at 1Hz, it follows that 24 hours at 30Hz will be ~30 gigs. So no, keep it at 1Hz.
 
-We now need to pass the raw GNSS satellite data in RINEX format (*\*.obs*) through a post-processing center to try to get the actual location of the antenna. There are a handful of services but we’ve had great luck using the Canadian [CSRS-PPP service](https://webapp.geod.nrcan.gc.ca/geod/tools-outils/ppp.php?locale=en). The US National Geodetic Service provides a service called [OPUS](https://www.ngs.noaa.gov/OPUS/) but we found it to be frustratingly limited by file size and format issues. Your mileage may vary. 
+We now need to pass the raw GNSS satellite data in RINEX format (_\*.obs_) through a post-processing center to try to get the actual location of the antenna. There are a handful of services but we’ve had great luck using the Canadian [CSRS-PPP service](https://webapp.geod.nrcan.gc.ca/geod/tools-outils/ppp.php?locale=en). The US National Geodetic Service provides a service called [OPUS](https://www.ngs.noaa.gov/OPUS/) but we found it to be frustratingly limited by file size and format issues. Your mileage may vary.
 
 ![Selecting ITRF upload on CSRS for PPP](img/Corrections/Uploading_file_to_CSRS.jpg)
 
@@ -197,49 +197,49 @@ Zip your obs file then create an account with [CSRS](https://webapp.geod.nrcan.g
 
 ![Email from CSRS Summary](img/Corrections/Email_from_CSRS_Summary_.jpg)
 
-Click the 'Summary' link to open a summary of results. This summary contains the coordinates of your antenna in Geodetic, UTM, and Cartesian formats. 
+Click the 'Summary' link to open a summary of results. This summary contains the coordinates of your antenna in Geodetic, UTM, and Cartesian formats.
 
 ![Output from CSRS](img/Corrections/SparkFun_PPP_Results.png)
 
-*The SparkFun antenna with +/-2mm of accuracy! :O*
+_The SparkFun antenna with +/-2mm of accuracy! :O_
 
 The email will also include a [fancy PDF report](img/Corrections/SparkFun-PPP.pdf) of your antenna’s location but does not include the Cartesian coordinates we will need later.
 
-If all goes well you should have a very precise location for your antenna. For SparkFun RTK products we are most interested in ECEF coordinates. [ECEF](https://en.wikipedia.org/wiki/ECEF) is *fascinating*. Rather than lat and long, ECEF is the number of meters from the internationally agreed-upon reference frame of the center of mass of the Earth. Basically, your ECEF coordinates are the distance you are from the *center of the Earth*. Neat.
+If all goes well you should have a very precise location for your antenna. For SparkFun RTK products we are most interested in ECEF coordinates. [ECEF](https://en.wikipedia.org/wiki/ECEF) is _fascinating_. Rather than lat and long, ECEF is the number of meters from the internationally agreed-upon reference frame of the center of mass of the Earth. Basically, your ECEF coordinates are the distance you are from the _center of the Earth_. Neat.
 
 ## Setting Fixed Location
 
-Now that you’ve got the ECEF position of your antenna, let’s tell the RTK product where its antenna is located with a few millimeters of accuracy. 
+Now that you’ve got the ECEF position of your antenna, let’s tell the RTK product where its antenna is located with a few millimeters of accuracy.
 
 **Configure via WiFi**
 
 Enter the WiFi AP config page or connect over Serial.
 
-![Setting ECEF coordinates over WiFi](img/WiFi Config/RTK_Surveyor_-_WiFi_Config_-_Base_Config1.jpg) 
+![Setting ECEF coordinates over WiFi](img/WiFi Config/RTK*Surveyor*-_WiFi_Config_-\_Base_Config1.jpg)
 
-*Setting ECEF coordinates over WiFi*
+_Setting ECEF coordinates over WiFi_
 
-Select **Fixed** and **ECEF Coordinates** then enter the coordinates obtained from the CSRS-PPP email. 
+Select **Fixed** and **ECEF Coordinates** then enter the coordinates obtained from the CSRS-PPP email.
 
-![Configuring NTRIP Server settings via WiFi Config AP](img/WiFi Config/RTK_Surveyor_-_WiFi_Config_-_Base_Config2.jpg) 
+![Configuring NTRIP Server settings via WiFi Config AP](img/WiFi Config/RTK*Surveyor*-_WiFi_Config_-\_Base_Config2.jpg)
 
-*Configuring NTRIP Server settings via WiFi Config AP*
+_Configuring NTRIP Server settings via WiFi Config AP_
 
 If your RTK product has access to a WiFi network, consider enabling the NTRIP Server. This will allow the RTK device to automatically begin transmitting its RTCM data to an NTRIP Caster once it has entered Fixed Base mode. See [Creating NTRIP Caster](permanent_base.md#creating-ntrip-caster) for more information.
 
-Save the settings to the RTK unit and exit. 
+Save the settings to the RTK unit and exit.
 
 **Configure via Serial**
 
-![Base Menu Options](img/Terminal/SparkFun_RTK_Express_-_Base_Menu.jpg) 
+![Base Menu Options](img/Terminal/SparkFun_RTK_Express_-_Base_Menu.jpg)
 
-*Base Menu Options*
+_Base Menu Options_
 
-To configure over serial, press 3 to open the Base menu, then 1 to toggle the Base Mode to Fixed/Static Position, then enter the three ECEF coordinates. 
+To configure over serial, press 3 to open the Base menu, then 1 to toggle the Base Mode to Fixed/Static Position, then enter the three ECEF coordinates.
 
-![Settings for the NTRIP Server](img/Terminal/SparkFun_RTK_Express_-_Base_Menu_-_Fixed_NTRIP.jpg) 
+![Settings for the NTRIP Server](img/Terminal/SparkFun_RTK_Express_-_Base_Menu_-_Fixed_NTRIP.jpg)
 
-*Settings for the NTRIP Server*
+_Settings for the NTRIP Server_
 
 If your RTK product has access to a WiFi network, consider enabling the NTRIP Server. This will allow the RTK device to automatically begin transmitting its RTCM data to an NTRIP Caster once it has entered Fixed Base mode. See [Creating NTRIP Caster](permanent_base.md#creating-ntrip-caster) for more information.
 
@@ -249,15 +249,15 @@ Press x multiple times to exit the serial menu.
 
 Power cycle the unit to load the Fixed ECEF coordinates. After boot, use the **Setup** button to enter **Base** mode.
 
-![RTK Facet in Fixed Transmit Mode](img/Displays/SparkFun_RTK_Express_-_Display_-_FixedBase-Xmitting.jpg) 
+![RTK Facet in Fixed Transmit Mode](img/Displays/SparkFun_RTK_Express_-_Display_-_FixedBase-Xmitting.jpg)
 
-*RTK Facet in Fixed Transmit Mode*
+_RTK Facet in Fixed Transmit Mode_
 
-Almost immediately after entering Base mode, the unit will begin outputting RTCM messages. These RTCM messages are sent to the **RADIO** port on the device. This is helpful for transmitting corrections via serial radio to any Rover units within a 10km baseline. 
+Almost immediately after entering Base mode, the unit will begin outputting RTCM messages. These RTCM messages are sent to the **RADIO** port on the device. This is helpful for transmitting corrections via serial radio to any Rover units within a 10km baseline.
 
-![RTK Facet in Transmit Mode with NTRIP Enabled](img/Displays/SparkFun_RTK_Express_-_Display_-_FixedBase-Casting.jpg) 
+![RTK Facet in Transmit Mode with NTRIP Enabled](img/Displays/SparkFun_RTK_Express_-_Display_-_FixedBase-Casting.jpg)
 
-*RTK Facet in Transmit Mode with NTRIP Server Enabled*
+_RTK Facet in Transmit Mode with NTRIP Server Enabled_
 
 If the NTRIP server is enabled the device will first attempt to connect over WiFi. The WiFi icon will blink until a WiFi connection is obtained. If the WiFi icon continually blinks be sure to check your SSID and PW for the local WiFi.
 
@@ -275,23 +275,23 @@ There are a variety of Windows applications out there that claim to be an NTRIP 
 
 **NTRIP Server:**
 
-* Caster Host: rtk2go.com
-* Caster Port: 2101
-* Caster User Name: Not needed
-* Caster User PW: Not needed
-* Mount Point: Provided by RTK2Go
-* Mount Point PW: Required and provided by RTK2Go
+- Caster Host: rtk2go.com
+- Caster Port: 2101
+- Caster User Name: Not needed
+- Caster User PW: Not needed
+- Mount Point: Provided by RTK2Go
+- Mount Point PW: Required and provided by RTK2Go
 
 **NTRIP Client:**
 
-* Caster Host: rtk2go.com
-* Caster Port: 2101
-* Caster User Name: **Your Valid Email Address**
-* Caster User PW: Not needed
-* Mount Point: Provided by RTK2Go
-* Mount Point PW: **Not Needed**
+- Caster Host: rtk2go.com
+- Caster Port: 2101
+- Caster User Name: **Your Valid Email Address**
+- Caster User PW: Not needed
+- Mount Point: Provided by RTK2Go
+- Mount Point PW: **Not Needed**
 
-The differences between Server and Client are small. The Server needs to know the mount point PW as it needs to be authorized to push data there. The Client needs to know which mount point but does not need a mount point password. 
+The differences between Server and Client are small. The Server needs to know the mount point PW as it needs to be authorized to push data there. The Client needs to know which mount point but does not need a mount point password.
 
 **Note:** You must provide a valid email address to RTK2Go. From RTK2Go:
 
@@ -299,7 +299,7 @@ The differences between Server and Client are small. The Server needs to know th
 
 ![The SparkFun Mount Point bldr_SparkFun1](img/Corrections/SparkFun%20RTK%20RTK2Go%20SparkFun%20Mount%20Point.png)
 
-*The SparkFun Mount Point 'bldr_SparkFun1'*
+_The SparkFun Mount Point 'bldr_SparkFun1'_
 
 To verify that your RTK product is correctly broadcasting RTCM data, you can access RTK2Go from a browser on Port 2101. This link [RTK2Go.com:2101](http://www.rtk2go.com:2101/) will show a list of all current NTRIP Servers that are pushing data to the RTK2Go caster, and are available to be accessed, free of charge, by any NTRIP Client in the world.
 
@@ -309,30 +309,30 @@ To verify that your RTK product is correctly broadcasting RTCM data, you can acc
 
 ![Emlid Mount Points](img/Corrections/SparkFun%20RTK%20Emlid%20Mount%20Points.png)
 
-*Emlid Mount Points with PWs removed*
+_Emlid Mount Points with PWs removed_
 
 Once your account is created, you'll be presented with Mount Points and Rovers.
 
 **NTRIP Server:**
 
-* Caster Host: caster.emlid.com
-* Caster Port: 2101
-* Caster User Name: Not needed
-* Caster User PW: Not needed
-* Mount Point: Required. MP1979 for example. Shown in your mount point dashboard.
-* Mount Point PW: Required. Shown in your mount point dashboard.
+- Caster Host: caster.emlid.com
+- Caster Port: 2101
+- Caster User Name: Not needed
+- Caster User PW: Not needed
+- Mount Point: Required. MP1979 for example. Shown in your mount point dashboard.
+- Mount Point PW: Required. Shown in your mount point dashboard.
 
 **NTRIP Client:**
 
-* Caster Host: caster.emlid.com
-* Caster Port: 2101
-* Caster User Name: Required. Shown in your rover dashboard.
-* Caster User PW: Required. Shown in your rover dashboard.
-* Mount Point: Required. Shown in your rover dashboard.
-* Mount Point PW: Not Needed
+- Caster Host: caster.emlid.com
+- Caster Port: 2101
+- Caster User Name: Required. Shown in your rover dashboard.
+- Caster User PW: Required. Shown in your rover dashboard.
+- Mount Point: Required. Shown in your rover dashboard.
+- Mount Point PW: Not Needed
 
 ![Emlid Mount Points](img/Corrections/SparkFun%20RTK%20Emlid%20Mount%20Points.png)
 
-*'Online' Badge Illuminated*
+_'Online' Badge Illuminated_
 
 To verify that your RTK product is correctly broadcasting RTCM data open the Emlid Caster dashboard. Once a device is successfully connected as a mount point or rover, the Emlid dashboard will turn green.

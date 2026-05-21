@@ -10,7 +10,7 @@ To configure an RTK device using serial attach a [USB C cable](https://www.spark
 
 ![RTK Surveyor Connectors and label](img/Serial/SparkFun_RTK_Surveyor_-_Connectors1.jpg)
 
-*The SparkFun RTK Surveyor has a variety of connectors*
+_The SparkFun RTK Surveyor has a variety of connectors_
 
 Connect the USB cable to the connector labeled **Config ESP32**.
 
@@ -32,21 +32,21 @@ In the image above, the `USB Serial Device` is the ZED-F9P and the `USB-SERIAL C
 
 **Don't See 'USB Serial Device'?** The first time a u-blox module is connected to a computer you may need to adjust the COM driver. Check out our section on <a href="https://learn.sparkfun.com/tutorials/getting-started-with-u-center-for-u-blox#install-drivers">"How to Install u-blox Drivers"</a> for help with the installation.
 
-Configuring the RTK device is done over the *USB-Serial CH340* COM port via the serial text menu. Various debug messages are printed to this port at 115200bps and a serial menu can be opened to configure advanced settings. 
+Configuring the RTK device is done over the _USB-Serial CH340_ COM port via the serial text menu. Various debug messages are printed to this port at 115200bps and a serial menu can be opened to configure advanced settings.
 
-Configuring the ZED-F9P is done over the *USB Serial Device* port using [u-center](https://learn.sparkfun.com/tutorials/getting-started-with-u-center-for-u-blox/all). It’s not necessary for normal operation but is handy for tailoring the receiver to specific applications. As an added perk, the ZED-F9P can be detected automatically by some mobile phones and tablets. If desired, the receiver can be directly connected to a compatible phone or tablet removing the need for a Bluetooth connection.
+Configuring the ZED-F9P is done over the _USB Serial Device_ port using [u-center](https://learn.sparkfun.com/tutorials/getting-started-with-u-center-for-u-blox/all). It’s not necessary for normal operation but is handy for tailoring the receiver to specific applications. As an added perk, the ZED-F9P can be detected automatically by some mobile phones and tablets. If desired, the receiver can be directly connected to a compatible phone or tablet removing the need for a Bluetooth connection.
 
 ## Terminal Window
 
-Open a terminal window at 115200bps; you should see various status messages every second. Press any key to open the configuration menu. Not sure how to use a terminal? Check out our [Serial Terminal Basics](https://learn.sparkfun.com/tutorials/terminal-basics) tutorial. 
+Open a terminal window at 115200bps; you should see various status messages every second. Press any key to open the configuration menu. Not sure how to use a terminal? Check out our [Serial Terminal Basics](https://learn.sparkfun.com/tutorials/terminal-basics) tutorial.
 
 Note that some Windows terminal programs (e.g. Tera Term) may reboot the Facet when the terminal connection is closed. You can disconnect the USB cable first to prevent this from happening.
 
 ![Terminal showing menu](img/Terminal/SparkFun_RTK_ExpressPlus_MainMenu.jpg)
 
-*Main Menu*
+_Main Menu_
 
-Pressing any button will display the Main menu. The Main menu will display the current firmware version and the Bluetooth broadcast name. Note: When powered on, the RTK device will broadcast itself as either *[Platform] Rover-XXXX* or *[Platform] Base-XXXX* depending on which state it is in. The Platform is 'Facet', 'Express', 'Surveyor', etc.
+Pressing any button will display the Main menu. The Main menu will display the current firmware version and the Bluetooth broadcast name. Note: When powered on, the RTK device will broadcast itself as either _[Platform] Rover-XXXX_ or _[Platform] Base-XXXX_ depending on which state it is in. The Platform is 'Facet', 'Express', 'Surveyor', etc.
 
 Pressing '1' or 's' for example, will open those submenus.
 
@@ -54,7 +54,7 @@ The menus will timeout after 10 minutes of inactivity, so if you do not press a 
 
 ![Configuration menu open over Bluetooth](img/Bluetooth/SparkFun%20RTK%20BEM%20-%20Exit%20BEM.png)
 
-*Configuration menu via Bluetooth*
+_Configuration menu via Bluetooth_
 
 **Note:** Starting with firmware v3.0, Bluetooth-based configuration is supported. Please see [Configure With Bluetooth](configure_with_bluetooth.md) for more information.
 
@@ -64,27 +64,27 @@ Sending the `~` character to the device over the serial port will trigger a syst
 
 ![System status NMEA outputted to terminal](img/Terminal/SparkFun RTK System Status Trigger.png)
 
-*Terminal showing System Status*
+_Terminal showing System Status_
 
 Below is an example system status report sentence:
 
-> $GNTXT,01,01,05,202447.00,270522,0.380,29,40.090355193,-105.184764700,1560.56,3,0,86*71
+> $GNTXT,01,01,05,202447.00,270522,0.380,29,40.090355193,-105.184764700,1560.56,3,0,86\*71
 
-* $GNTXT : Start of custom NMEA sentence
-* 01 : Number of sentences
-* 01 : Sentence number
-* 05 : Sentence type ID (5 is for System Status messages)
-* 202447.00 : Current hour, minute, second, milliseconds
-* 270522 : Current day, month, year
-* 0.380 : Current horizontal positional accuracy (m)
-* 29 : Satellites in view
-* 40.090355193 : Latitude
-* -105.184764700 : Longitude
-* 1560.56 : Altitude
-* 3 : Fix type (0 = no fix, 2 = 2D fix, 3 = 3D fix, 4 = 3D + Dead Reackoning, 5 = Time)
-* 0 : Carrier solution (0 = No RTK, 1 = RTK Float, 2 = RTK Fix)
-* 86 : Battery level (% remaining)
-* *71 : The completion of the sentence and a [CRC](http://engineeringnotes.blogspot.com/2015/02/generate-crc-for-nmea-strings-arduino.html)
+- $GNTXT : Start of custom NMEA sentence
+- 01 : Number of sentences
+- 01 : Sentence number
+- 05 : Sentence type ID (5 is for System Status messages)
+- 202447.00 : Current hour, minute, second, milliseconds
+- 270522 : Current day, month, year
+- 0.380 : Current horizontal positional accuracy (m)
+- 29 : Satellites in view
+- 40.090355193 : Latitude
+- -105.184764700 : Longitude
+- 1560.56 : Altitude
+- 3 : Fix type (0 = no fix, 2 = 2D fix, 3 = 3D fix, 4 = 3D + Dead Reackoning, 5 = Time)
+- 0 : Carrier solution (0 = No RTK, 1 = RTK Float, 2 = RTK Fix)
+- 86 : Battery level (% remaining)
+- \*71 : The completion of the sentence and a [CRC](http://engineeringnotes.blogspot.com/2015/02/generate-crc-for-nmea-strings-arduino.html)
 
 **Note:** This is a custom NMEA sentence, can vary in length, and may exceed the [maximum permitted sentence length](https://www.nmea.org/Assets/20160520%20txt%20amendment.pdf) of 61 characters.
 
@@ -92,4 +92,4 @@ Below is an example system status report sentence:
 
 Because of the way corrections are provided between the sub modules (NEO-D9S and ZED-F9P), the corrections will be interrupted while the configuration menu is open. RTK Fix may be lost if the menu is open for more than ~30s. RTK Fix will return once the configuration is complete and the menu is closed.
 
-Note: This only affects the RTK Facet L-Band model. 
+Note: This only affects the RTK Facet L-Band model.

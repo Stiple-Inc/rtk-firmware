@@ -4,17 +4,17 @@ Surveyor: ![Feature Not Supported](img/Icons/RedDot.png) / Express: ![Feature Su
 
 ![List of system profiles](img/WiFi Config/SparkFun%20RTK%20Profiles%20Menu.png)
 
-*Profiles Menu on the WiFi config page*
+_Profiles Menu on the WiFi config page_
 
 ![Profiles Menu](img/Terminal/SparkFun_RTK_ExpressPlus_Profiles.jpg)
 
-*User Profiles Menu*
+_User Profiles Menu_
 
 Profiles are a very powerful feature. A profile is a complete copy of all the settings on the RTK product. Switching profiles changes all the settings in one step. This is handy for creating a complex setup for surveying, and a different setup for an NTRIP-enabled base station. Rather than changing the variety of parameters, a user can simply switch profiles.
 
 ![Multiple Profiles on Menu](img/SparkFun_RTK_Facet_Profile.jpg)
 
-*Multiple Profiles on Menu*
+_Multiple Profiles on Menu_
 
 If more than one profile is defined, the profiles will be displayed and selectable by using the **Power/Setup** on the Facet or **Setup** on the Express and Express Plus. Profiles can be named up to 50 characters; only the first 7 characters will be shown on the menu.
 

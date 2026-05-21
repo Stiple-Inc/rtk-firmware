@@ -4,7 +4,7 @@ Surveyor: ![Feature Supported](img/Icons/GreenDot.png) / Express: ![Feature Supp
 
 Once a [correction source](correction_sources.md) is chosen, the correction data must be transported from the base to the rover. The RTCM serial data is approximately 530 bytes per second and is transmitted at 57600bps out of the **RADIO** port on a SparkFun RTK device.
 
-There are a variety of ways to move data from a base to a rover. We will cover the most common below. 
+There are a variety of ways to move data from a base to a rover. We will cover the most common below.
 
 Note: RTK calculations require RTCM data to be delivered approximately once per second. If RTCM data is lost or not received by a rover, RTK Fix can still be maintained for many seconds before the device will enter RTK Float mode. This is beneficial where devices like Serial Radios may drop packets due to RF congestion.
 
@@ -12,9 +12,9 @@ Note: RTK calculations require RTCM data to be delivered approximately once per 
 
 ## WiFi
 
-![NTRIP Server setup](img/WiFi Config/RTK_Surveyor_-_WiFi_Config_-_Base_Config2.jpg)
+![NTRIP Server setup](img/WiFi Config/RTK*Surveyor*-_WiFi_Config_-\_Base_Config2.jpg)
 
-Any SparkFun RTK device can be set up as an [NTRIP Server](menu_base.md#ntrip-server). This means the device will connect to local WiFi and broadcast its correction data to the internet. The data is delivered to something called an NTRIP Caster. Any number of rovers can then access this data using something called an NTRIP Client. Nearly *every* GIS application has an NTRIP Client built into it so this makes it very handy.
+Any SparkFun RTK device can be set up as an [NTRIP Server](menu_base.md#ntrip-server). This means the device will connect to local WiFi and broadcast its correction data to the internet. The data is delivered to something called an NTRIP Caster. Any number of rovers can then access this data using something called an NTRIP Client. Nearly _every_ GIS application has an NTRIP Client built into it so this makes it very handy.
 
 WiFi broadcasting is the most common transport method of getting RTCM correction data to the internet and to rovers via NTRIP Clients.
 
@@ -34,7 +34,7 @@ Cellular can even be used in Base mode. We have seen some very inventive users u
 
 ## L-Band
 
-What if you are in the field, far away from WiFi, cellular, radio, or any other data connection? Look to the sky! 
+What if you are in the field, far away from WiFi, cellular, radio, or any other data connection? Look to the sky!
 
 A variety of companies provide GNSS RTK corrections broadcast from satellites over a spectrum called L-Band. [L-Band](https://en.wikipedia.org/wiki/L_band) is any frequency from 1 to 2 GHz. These frequencies have the ability to penetrate clouds, fog, and other natural weather phenomena making them particularly useful for location applications.
 
@@ -56,7 +56,7 @@ All SparkFun RTK products include a [4-pin to 6-pin cable](https://www.sparkfun.
 
 These radios attach nicely to the back or bottom of an RTK device.
 
-The benefit of a serial telemetry radio link is that you do not need to configure anything; simply plug two radios onto two RTK devices and turn them on. 
+The benefit of a serial telemetry radio link is that you do not need to configure anything; simply plug two radios onto two RTK devices and turn them on.
 
 The downside to serial telemetry radios is that they generally have a much shorter range (often slightly more than a 1-kilometer functional range) than a cellular link can provide.
 

@@ -16,7 +16,7 @@ Select **World Imagery**.
 
 ![ArcGIS Field Maps with 12mm accuracy](<img/FieldMaps/SparkFun RTK Field Maps - RTK Fix.png>)
 
-*ArcGIS Field Maps with 12mm accuracy*
+_ArcGIS Field Maps with 12mm accuracy_
 
 Field Maps will use the device's internal location as its default location provider. With GNSS Master or Lefebure providing the mock location to the phone, Field Maps will have a super precise GNSS location and data collection can begin.
 
@@ -28,7 +28,7 @@ Once a [mock location](connecting_bluetooth.md/#enable-mock-location) provider i
 
 ![QuickCapture Main Window](<img/QuickCapture/SparkFun RTK QuickCapture - Main Window.png>)
 
-For the purposes of this demonstration, click *Continue without signing in*.
+For the purposes of this demonstration, click _Continue without signing in_.
 
 ![Add project button](<img/QuickCapture/SparkFun RTK QuickCapture - Workspace.png>)
 
@@ -56,7 +56,7 @@ Once a [mock location](connecting_bluetooth.md/#enable-mock-location) provider i
 
 ![Survey123 Splash](<img/Survey123/SparkFun RTK Survey123 - Splash.png>)
 
-For the purposes of this demonstration, click *Continue without signing in*.
+For the purposes of this demonstration, click _Continue without signing in_.
 
 ![Main window](<img/Survey123/SparkFun RTK Survey123 - Main.png>)
 
@@ -98,17 +98,17 @@ If you’re using a serial radio to connect a Base to a Rover for your correctio
 
 ![NTRIP Settings](<img/DiamondMaps/SparkFun RTK Diamond Maps - NTRIP Settings.png>)
 
-From this window, an NTRIP Client can be configured. Enter your NTRIP Caster information then click on **START**. Click *Close* to exit out to the main window.
+From this window, an NTRIP Client can be configured. Enter your NTRIP Caster information then click on **START**. Click _Close_ to exit out to the main window.
 
 ![RTK Fix at SparkFun](<img/DiamondMaps/SparkFun RTK Diamond Maps - RTK Fix.png>)
 
-*0.03ft accuracy shown in green*
+_0.03ft accuracy shown in green_
 
-Closing the GPS Source window will show the map as well as the relative accuracy in feet. 
+Closing the GPS Source window will show the map as well as the relative accuracy in feet.
 
 ## Field Genius
 
-[Field Genius for Android](https://www.microsurvey.com/products/fieldgenius-for-android/) is another good solution, albeit a lot more expensive than free. 
+[Field Genius for Android](https://www.microsurvey.com/products/fieldgenius-for-android/) is another good solution, albeit a lot more expensive than free.
 
 Be sure your device is [paired over Bluetooth](connecting_bluetooth.md#android).
 
@@ -122,7 +122,7 @@ Click the 'Add Profile' button.
 
 ![New Instrument Profile](img/FieldGenius/Field%20Genius%204.png)
 
-Click `GNSS Rover` and select *NMEA* as the Make. Set your Profile Name to something memorable like 'RTK-Express' then click the 'Create' button.
+Click `GNSS Rover` and select _NMEA_ as the Make. Set your Profile Name to something memorable like 'RTK-Express' then click the 'Create' button.
 
 ![Set up communication](img/FieldGenius/Field%20Genius%205.png)
 
@@ -158,15 +158,15 @@ Click 'Add New Source'.
 
 ![NTRIP Credential Entry](img/FieldGenius/Field%20Genius%2012.png)
 
-Enter your NTRIP Caster credentials and click 'DONE'. 
+Enter your NTRIP Caster credentials and click 'DONE'.
 
 What's an NTRIP Caster? In a nutshell, it's a server that is sending out correction data every second. There are thousands of sites around the globe that calculate the perturbations in the ionosphere and troposphere that decrease the accuracy of GNSS accuracy. Once the inaccuracies are known, correction values are encoded into data packets in the RTCM format. You, the user, don't need to know how to decode or deal with RTCM, you simply need to get RTCM from a source within 10km of your location into the RTK device. The NTRIP client logs into the server (also known as the NTRIP caster) and grabs that data, every second, and sends it over Bluetooth to the RTK device.
 
-Don't have access to an NTRIP Caster? You can use a 2nd RTK product operating in Base mode to provide the correction data. Check out [Creating a Permanent Base](permanent_base.md). If you're the DIY sort, you can create your own low-cost base station using an ESP32 and a ZED-F9P breakout board. Check out [How to Build a DIY GNSS Reference Station](https://learn.sparkfun.com/tutorials/how-to-build-a-diy-gnss-reference-station). If you'd just like a service, [Syklark](https://www.swiftnav.com/skylark) provides RTCM coverage for $49 a month (as of writing) and is extremely easy to set up and use. Remember, you can always use a 2nd RTK device in *Base* mode to provide RTCM correction data but it will be less accurate than a fixed position caster.
+Don't have access to an NTRIP Caster? You can use a 2nd RTK product operating in Base mode to provide the correction data. Check out [Creating a Permanent Base](permanent_base.md). If you're the DIY sort, you can create your own low-cost base station using an ESP32 and a ZED-F9P breakout board. Check out [How to Build a DIY GNSS Reference Station](https://learn.sparkfun.com/tutorials/how-to-build-a-diy-gnss-reference-station). If you'd just like a service, [Syklark](https://www.swiftnav.com/skylark) provides RTCM coverage for $49 a month (as of writing) and is extremely easy to set up and use. Remember, you can always use a 2nd RTK device in _Base_ mode to provide RTCM correction data but it will be less accurate than a fixed position caster.
 
 ![Selecting data source](img/FieldGenius/Field%20Genius%2011.png)
 
-Click 'My NTRIP1' then 'Done' and 'Connect'. 
+Click 'My NTRIP1' then 'Done' and 'Connect'.
 
 You will then be presented with a list of Mount Points. Select the mount point you'd like to use then click 'Select' then 'Confirm'.
 
@@ -190,7 +190,7 @@ From the GNSS Master main screen, select **GNSS Receiver Connection**.
 
 ![GNSS Receiver Selection](<img/GNSSMaster/SparkFun RTK GNSS Master - Receiver Selection.png>)
 
-Pick the RTK device to connect to from the list, then click *Connect*. The **Data Rate** should increase indicating data flowing from the RTK device to the GNSS Master app. Click the back button to return to the main screen.
+Pick the RTK device to connect to from the list, then click _Connect_. The **Data Rate** should increase indicating data flowing from the RTK device to the GNSS Master app. Click the back button to return to the main screen.
 
 ![Correction Input](<img/GNSSMaster/SparkFun RTK GNSS Master - Correction Input.png>)
 
@@ -206,7 +206,7 @@ Enter your NTRIP Client information then click **SAVE**.
 
 ![Data from Caster](<img/GNSSMaster/SparkFun RTK GNSS Master - Correction Source Data Flowing.png>)
 
-Once connected the *Data Rate* should increase above 0 bytes per second.  Return to the home screen by hitting the back button.
+Once connected the _Data Rate_ should increase above 0 bytes per second. Return to the home screen by hitting the back button.
 
 ![Enable Mock Location](<img/GNSSMaster/SparkFun RTK GNSS Master - Mock Location.png>)
 
@@ -214,9 +214,9 @@ Enable mock location. If GNSS Master throws an error, re-enable GNSS Master as y
 
 Once enabled, any GIS app that selects 'Internal' or 'Phone Location' as its source will instead be fed the high precision NMEA being generated by the RTK device connected over Bluetooth.
 
-## Lefebure 
+## Lefebure
 
-[Lefebure NTRIP Client](https://play.google.com/store/apps/details?id=com.lefebure.ntripclient&hl=en_US) is the *original* app for getting correction from an NTRIP caster and down over Bluetooth. It's an oldie but a goodie.
+[Lefebure NTRIP Client](https://play.google.com/store/apps/details?id=com.lefebure.ntripclient&hl=en_US) is the _original_ app for getting correction from an NTRIP caster and down over Bluetooth. It's an oldie but a goodie.
 
 **Note:** Most GIS apps will not need Lefebure or Mock Location enabled and this section can be skipped.
 
@@ -226,7 +226,7 @@ Read how to [Enable Mock Location](connecting_bluetooth.md/#enable-mock-location
 
 ![LEfebure settings](<img/Lefebure/SparkFun RTK Lefebure - Main.png>)
 
-Once mock locations are enabled, click on the *Settings* gear in the top left corner.
+Once mock locations are enabled, click on the _Settings_ gear in the top left corner.
 
 ![NTRIP Settings](<img/Lefebure/SparkFun RTK Lefebure - NTRIP Settings.png>)
 
@@ -238,7 +238,7 @@ Enter the Caster information and hit the back button.
 
 ![Receive Settings](<img/Lefebure/SparkFun RTK Lefebure - Receiver Settings.png>)
 
-Select *Receiver Settings*.
+Select _Receiver Settings_.
 
 ![Bluetooth and Mock location enable](<img/Lefebure/SparkFun RTK Lefebure - Receiver Settings Bluetooth.png>)
 
@@ -254,11 +254,11 @@ Press the **Connect** button. The app will connect to the NTRIP Caster. Now, any
 
 [QField](https://docs.qfield.org/get-started/) is a free GIS Android app that runs QGIS.
 
-![NMEA message configuration](img/WiFi Config/RTK_Surveyor_-_WiFi_Config_-_GNSS_Config_Messages.jpg)
+![NMEA message configuration](img/WiFi Config/RTK*Surveyor*-_WiFi_Config_-\_GNSS_Config_Messages.jpg)
 
-*The 'Reset to Surveying Defaults' button*
+_The 'Reset to Surveying Defaults' button_
 
-First, configure the RTK device to output *only* NMEA messages. QField currently does not correctly parse other messages such as RAWX or RTCM so these will interfere with communication if they are enabled.
+First, configure the RTK device to output _only_ NMEA messages. QField currently does not correctly parse other messages such as RAWX or RTCM so these will interfere with communication if they are enabled.
 
 These RTK device settings can be found under the [Messages menu](menu_messages.md) through the [WiFi config page](configure_with_wifi.md) or through the [Serial Config menu](configure_with_serial.md).
 
@@ -268,31 +268,31 @@ Create an account and project on [QFieldCloud](https://qfield.cloud/). This proj
 
 ![Open Test Project](img/QField/SparkFun%20RTK%20QField%20-%20Refresh%20Project.png)
 
-*Refresh Projects button*
+_Refresh Projects button_
 
 Once the project is created, press the Refresh projects list button to update the list. Then select your project.
 
 ![Hamburger Menu](img/QField/SparkFun%20RTK%20QField%20-%20Open%20Settings.png)
 
-*'Hamburger' menu in upper right corner*
+_'Hamburger' menu in upper right corner_
 
 Press the icon in the top left corner of the app to open the project settings.
 
 ![Project Settings Menu](img/QField/SparkFun%20RTK%20QField%20-%20Project%20Settings%202.png)
 
-*Project settings*
+_Project settings_
 
 From the project settings menu, press the gear icon to open the device settings dropdown menu.
 
 ![Project Settings Submenu](img/QField/SparkFun%20RTK%20QField%20-%20Project%20Settings.png)
 
-*Project settings submenu*
+_Project settings submenu_
 
 From the submenu, select 'Settings'.
 
 ![Position Menu](img/QField/SparkFun%20RTK%20QField%20-%20Select%20Positioning%20Devce.png)
 
-*Positioning Menu*
+_Positioning Menu_
 
 Select the Positioning Menu. Then, with your RTK device on and in normal mode (not AP Config) press the Scan button in the QField app to update the dropdown list of available Bluetooth devices. If your device is not detected, be sure you've [paired your cellphone or laptop with Bluetooth](connecting_bluetooth.md).
 
@@ -304,16 +304,16 @@ Once connected exit out of the menus and see position information within your pr
 
 ![Startup wizard](img/SurveyMaster/SparkFun%20RTK%20Survey%20Master%20-%2001.png)
 
-By default, a wizard will guide you through the setup. The Project step will ask you for the name of the project, the datum, etc. 
+By default, a wizard will guide you through the setup. The Project step will ask you for the name of the project, the datum, etc.
 
 ![Connection Setup
 ](img/SurveyMaster/SparkFun%20RTK%20Survey%20Master%20-%2027.png)
 
-Next select your connection. 
+Next select your connection.
 
 ![Connection specifics](img/SurveyMaster/SparkFun%20RTK%20Survey%20Master%20-%2029.png)
 
-For the Device Model select 'NMEA Device'. 
+For the Device Model select 'NMEA Device'.
 
 ![TOP106 Antenna Parameters](img/SurveyMaster/SparkFun%20RTK%20Survey%20Master%20-%2002.png)
 
@@ -353,7 +353,7 @@ Select the newly created work mode and press the 'Apply' button.
 
 Survey Master will attempt to connect to your specified RTK corrections source (NTRIP Caster). Upon success, you will be located on the Project menu.
 
-Survey Master expects many more NMEA sentences than most GIS software. We must enable some additional messages on the RTK device to correctly communicate with Survey Master. 
+Survey Master expects many more NMEA sentences than most GIS software. We must enable some additional messages on the RTK device to correctly communicate with Survey Master.
 
 ![Configured NMEA messages](img/SurveyMaster/SparkFun%20RTK%20Survey%20Master%20-%2026%20.jpg)
 
@@ -363,15 +363,15 @@ Connect to the RTK device either over [WiFi AP config](/configure_with_wifi/) or
 
 Open a terminal at 115200bps and press a key to open the serial configuration menu. Press '2' for GNSS Messages, press '1' for NMEA messages, now be sure to enable 9 messages to a rate of 1:
 
-* GGA
-* GLL
-* GRS
-* GSA
-* GST
-* GSV
-* RMC
-* VTG
-* ZDA
+- GGA
+- GLL
+- GRS
+- GSA
+- GST
+- GSV
+- RMC
+- VTG
+- ZDA
 
 Once complete, press x until you exit the serial menus. Now we may return to Survey Master.
 
@@ -381,11 +381,11 @@ Click on the 'Survey' menu and then 'Topo Survey'. Above we can see a device wit
 
 Known Issues:
 
-* Survey Master parses the GxGSV sentence improperly and will only indicate GPS satellites even though the fix solution is using all satellites.
+- Survey Master parses the GxGSV sentence improperly and will only indicate GPS satellites even though the fix solution is using all satellites.
 
 ![NMEA Sentences](img/SurveyMaster/SparkFun%20RTK%20Survey%20Master%20-%2015.png)
 
-To verify the NMEA sentences are being delivered correctly, Survey Master has a built-in tool. Select the Device->Rover->More->'H-Terminal'. 
+To verify the NMEA sentences are being delivered correctly, Survey Master has a built-in tool. Select the Device->Rover->More->'H-Terminal'.
 
 ## SurPad
 
@@ -395,23 +395,23 @@ Be sure your RTK device has been [paired over Bluetooth](connecting_bluetooth.md
 
 ![SurPad Home Screen](<img/SurPad/SparkFun RTK - SurPad - Home Screen.png>)
 
-*SurPad Home Screen*
+_SurPad Home Screen_
 
 Create a project and get to the home screen. Shown above, click on the GNSS receiver icon.
 
 ![SurPad connecting over Bluetooth](<img/SurPad/SparkFun RTK - SurPad - Communication.png>)
 
-*SurPad connecting over Bluetooth*
+_SurPad connecting over Bluetooth_
 
-Set the **Device manufacturer** to *Other*, **Device type** to *RTK(NMEA0183)*, and **Communication Mode** to *Bluetooth*. Select the SparkFun RTK device that you would like to connect to on the **Paired Devices** list and then click *Connect*.
+Set the **Device manufacturer** to _Other_, **Device type** to _RTK(NMEA0183)_, and **Communication Mode** to _Bluetooth_. Select the SparkFun RTK device that you would like to connect to on the **Paired Devices** list and then click _Connect_.
 
-Once connected to the device a *Debug* button will appear. This is one of the nice features of SurPad: Running debug will allow you to inspect the NMEA coming across the link.
+Once connected to the device a _Debug_ button will appear. This is one of the nice features of SurPad: Running debug will allow you to inspect the NMEA coming across the link.
 
-Once done, press the back arrow (top left corner) to return to the home screen. 
+Once done, press the back arrow (top left corner) to return to the home screen.
 
 ![SurPad Point Survey map](<img/SurPad/SparkFun RTK - SurPad - Point Survey.png>)
 
-*SurPad Point Survey map*
+_SurPad Point Survey map_
 
 Above: From the home screen press the **Survey** button at the bottom, then **Point Survey** to bring up the map.
 
@@ -419,21 +419,21 @@ In the top left corner, press the green hamburger + cell phone icon. This will o
 
 ![SurPad Data Link NTRIP Configuration](<img/SurPad/SparkFun RTK - SurPad - Data Link.png>)
 
-*SurPad Data Link NTRIP Configuration*
+_SurPad Data Link NTRIP Configuration_
 
-Change the **Connect Mode** from *TCP Client* to *NTRIP*. If you are unable to edit or change the **Connect Mode** from TCP Client be sure the TCP Client is stopped by pressing the *Stop* button in the lower left corner (located in the same spot as the highlighted *Start*).
+Change the **Connect Mode** from _TCP Client_ to _NTRIP_. If you are unable to edit or change the **Connect Mode** from TCP Client be sure the TCP Client is stopped by pressing the _Stop_ button in the lower left corner (located in the same spot as the highlighted _Start_).
 
 ![SurPad NTRIP Connection](<img/SurPad/SparkFun RTK - SurPad - Communication NTRIP Connected.png>)
 
-*SurPad NTRIP Connection*
+_SurPad NTRIP Connection_
 
 Enter the information for your NTRIP caster. In the above example, we are connected to the SparkFun base station on RTK2Go. For RTK2Go you will need to enter a valid email address for a user name but a password is not required.
 
-Click on *Start* and you should see the 'Receive data' progress bar (highlighted above) increase each second indicating a connection. Once complete, press 'Apply' to return to the map.
+Click on _Start_ and you should see the 'Receive data' progress bar (highlighted above) increase each second indicating a connection. Once complete, press 'Apply' to return to the map.
 
 ![SurPad with RTK Fix](<img/SurPad/SparkFun RTK - SurPad - Map with RTK Fix.png>)
 
-*SurPad with RTK Fix*
+_SurPad with RTK Fix_
 
 Above: After a few moments, the RTK device should move to RTK Float, then RTK Fix. You can see the age of the RTCM data in the upper bar, along with the horizontal (23mm) and vertical (31mm) accuracy estimates. Now you can begin taking points.
 
@@ -443,51 +443,51 @@ Be sure your device is [paired over Bluetooth](connecting_bluetooth.md#windows).
 
 ![Equip Sub Menu](img/SurvPC/SparkFun%20RTK%20Software%20-%20SurvPC%20Equip%20Menu.jpg)
 
-*Equip Sub Menu*
+_Equip Sub Menu_
 
-Select the *Equip* sub menu then `GPS Rover`
+Select the _Equip_ sub menu then `GPS Rover`
 
 ![Select NMEA GPS Receiver](img/SurvPC/SparkFun%20RTK%20Software%20-%20SurvPC%20Rover%20NMEA.jpg)
 
-*Select NMEA GPS Receiver*
+_Select NMEA GPS Receiver_
 
 From the drop down, select `NMEA GPS Receiver`.
 
 ![Select Model: DGPS](img/SurvPC/SparkFun%20RTK%20Software%20-%20SurvPC%20Rover%20DGPS.jpg)
 
-*Select Model: DGPS*
+_Select Model: DGPS_
 
 Select DGPS if you'd like to connect to an NTRIP Caster. If you are using the RTK Facet L-Band, or do not need RTK fix type precision, leave the model as Generic.
 
 ![Bluetooth Settings](img/SurvPC/SparkFun%20RTK%20Software%20-%20SurvPC%20Rover%20Comms.jpg)
 
-*Bluetooth Settings Button*
+_Bluetooth Settings Button_
 
 From the `Comms` submenu, click the Blueooth settings button.
 
 ![SurvPC Bluetooth Devices](img/SurvPC/SparkFun%20RTK%20Software%20-%20SurvPC%20Rover%20Find%20Device.jpg)
 
-*SurvPC Bluetooth Devices*
+_SurvPC Bluetooth Devices_
 
 Click `Find Device`.
 
 ![List of Paired Bluetooth Devices](img/SurvPC/SparkFun%20RTK%20Software%20-%20SurvPC%20Rover%20Select%20Bluetooth%20Device.jpg)
 
-*List of Paired Bluetooth Devices*
+_List of Paired Bluetooth Devices_
 
 You will be shown a list of devices that have been paired. Select the RTK device you want to connect to.
 
 ![Connect to Device](img/SurvPC/SparkFun%20RTK%20Software%20-%20SurvPC%20Rover%20Select%20Bluetooth%20Device%20With%20MAC.jpg)
 
-*Connect to Device*
+_Connect to Device_
 
-Click the `Connect Bluetooth` button, shown in red in the top right corner. The software will begin a connection to the RTK device. You'll see the MAC address on the RTK device changes to the Bluetooth icon indicating it's connected. 
+Click the `Connect Bluetooth` button, shown in red in the top right corner. The software will begin a connection to the RTK device. You'll see the MAC address on the RTK device changes to the Bluetooth icon indicating it's connected.
 
 If SurvPC detects NMEA, it will report a successful connection.
 
 ![Receiver Submenu](img/SurvPC/SparkFun%20RTK%20Software%20-%20SurvPC%20Rover%20Receiver.jpg)
 
-*Receiver Submenu*
+_Receiver Submenu_
 
 You are welcome to enter the ARP (antenna reference point) and surveying stick length for your particular setup.
 
@@ -497,7 +497,7 @@ Note: If you are using a radio to connect Base to Rover, or if you are using the
 
 ![RTK Submenu](img/SurvPC/SparkFun%20RTK%20Software%20-%20SurvPC%20NTRIP%20Client.jpg)
 
-*RTK Submenu*
+_RTK Submenu_
 
 If you selected 'DGPS' as the Model type, the RTK submenu will be shown. This is where you give the details about your NTRIP Caster such as your mount point, user name/pw, etc. For more information about creating your own NTRIP mount point please see [Creating a Permanent Base](permanent_base.md)
 
@@ -505,19 +505,19 @@ Enter your NTRIP Caster credentials and click connect. You will see bytes begin 
 
 What's an NTRIP Caster? In a nutshell, it's a server that is sending out correction data every second. There are thousands of sites around the globe that calculate the perturbations in the ionosphere and troposphere that decrease the accuracy of GNSS accuracy. Once the inaccuracies are known, correction values are encoded into data packets in the RTCM format. You, the user, don't need to know how to decode or deal with RTCM, you simply need to get RTCM from a source within 10km of your location into the RTK device. The NTRIP client logs into the server (also known as the NTRIP caster) and grabs that data, every second, and sends it over Bluetooth to the RTK device.
 
-Don't have access to an NTRIP Caster? You can use a 2nd RTK product operating in Base mode to provide the correction data. Checkout [Creating a Permanent Base](permanent_base.md). If you're the DIY sort, you can create your own low-cost base station using an ESP32 and a ZED-F9P breakout board. Check out [How to](https://learn.sparkfun.com/tutorials/how-to-build-a-diy-gnss-reference-station) Build a DIY GNSS Reference Station](https://learn.sparkfun.com/tutorials/how-to-build-a-diy-gnss-reference-station). If you'd just like a service, [Syklark](https://www.swiftnav.com/skylark) provides RTCM coverage for $49 a month (as of writing) and is extremely easy to set up and use. Remember, you can always use a 2nd RTK device in *Base* mode to provide RTCM correction data but it will be less accurate than a fixed position caster.
+Don't have access to an NTRIP Caster? You can use a 2nd RTK product operating in Base mode to provide the correction data. Checkout [Creating a Permanent Base](permanent_base.md). If you're the DIY sort, you can create your own low-cost base station using an ESP32 and a ZED-F9P breakout board. Check out [How to](https://learn.sparkfun.com/tutorials/how-to-build-a-diy-gnss-reference-station) Build a DIY GNSS Reference Station](https://learn.sparkfun.com/tutorials/how-to-build-a-diy-gnss-reference-station). If you'd just like a service, [Syklark](https://www.swiftnav.com/skylark) provides RTCM coverage for $49 a month (as of writing) and is extremely easy to set up and use. Remember, you can always use a 2nd RTK device in _Base_ mode to provide RTCM correction data but it will be less accurate than a fixed position caster.
 
 Once everything is connected up, click the Green check in the top right corner.
 
 ![Storing Points](img/SurvPC/SparkFun%20RTK%20Software%20-%20SurvPC%20Survey.jpg)
 
-*Storing Points*
+_Storing Points_
 
 Now that we have a connection, you can use the device, as usual, storing points and calculating distances.
 
 ![SurvPC Skyplot](img/SurvPC/SparkFun%20RTK%20Software%20-%20SurvPC%20Skyplot.jpg)
 
-*SurvPC Skyplot*
+_SurvPC Skyplot_
 
 Opening the Skyplot will allow you to see your GNSS details in real-time.
 
@@ -525,21 +525,21 @@ If you are a big fan of SurvPC please contact your sales rep and ask them to inc
 
 ## SW Maps
 
-The best mobile app that we’ve found is the powerful, free, and easy-to-use [SW Maps](https://play.google.com/store/apps/details?id=np.com.softwel.swmaps) by Softwel. It is compatible with Android and iOS, either phone or tablet with Bluetooth. What makes SW Maps truly powerful is its built-in NTRIP client. This is a fancy way of saying that we’ll be showing you how to get RTCM correction data over the cellular network. 
+The best mobile app that we’ve found is the powerful, free, and easy-to-use [SW Maps](https://play.google.com/store/apps/details?id=np.com.softwel.swmaps) by Softwel. It is compatible with Android and iOS, either phone or tablet with Bluetooth. What makes SW Maps truly powerful is its built-in NTRIP client. This is a fancy way of saying that we’ll be showing you how to get RTCM correction data over the cellular network.
 
 Be sure your device is [paired over Bluetooth](connecting_bluetooth.md#android).
 
 ![List of BT Devices in SW Maps](img/SWMaps/SparkFun%20RTK%20SWMaps%20Bluetooth%20Connect.png)
 
-*List of available Bluetooth devices*
+_List of available Bluetooth devices_
 
-From SW Map's main menu, select *Bluetooth GNSS*. This will display a list of available Bluetooth devices. Select the Rover or Base you just paired with. If you are taking height measurements (altitude) in addition to position (lat/long) be sure to enter the height of your antenna off the ground including any [ARP offsets](https://geodesy.noaa.gov/ANTCAL/FAQ.xhtml#faq4) of your antenna (this should be printed on the side).
+From SW Map's main menu, select _Bluetooth GNSS_. This will display a list of available Bluetooth devices. Select the Rover or Base you just paired with. If you are taking height measurements (altitude) in addition to position (lat/long) be sure to enter the height of your antenna off the ground including any [ARP offsets](https://geodesy.noaa.gov/ANTCAL/FAQ.xhtml#faq4) of your antenna (this should be printed on the side).
 
 Click on 'CONNECT' to open a Bluetooth connection. Assuming this process takes a few seconds, you should immediately have a location fix.
 
 ![SW Maps with RTK Fix](img/SWMaps/SparkFun%20RTK%20SWMaps%20GNSS%20Status.png)
 
-*SW Maps with RTK Fix*
+_SW Maps with RTK Fix_
 
 You can open the GNSS Status sub-menu to view the current data.
 
@@ -551,11 +551,11 @@ We need to send RTCM correction data from the phone back to the RTK device so th
 
 ![SW Maps NTRIP Connection menu](img/SWMaps/SparkFun_RTK_Surveyor_-_SW_Maps_NTRIP_Connection.jpg)
 
-*NTRIP Connection - Not there? Be sure to select 'SparkFun RTK' was selected as the instrument*
+_NTRIP Connection - Not there? Be sure to select 'SparkFun RTK' was selected as the instrument_
 
 ![SW Maps NTRIP client](img/SWMaps/SW_Maps_-_NTRIP_Client.jpg)
 
-*Connecting to an NTRIP Caster*
+_Connecting to an NTRIP Caster_
 
 Enter your NTRIP Caster credentials and click connect. You will see bytes begin to transfer from your phone to the RTK device. Within a few seconds, the RTK device will go from ~300mm accuracy to 14mm. Pretty nifty, no?
 
@@ -595,20 +595,20 @@ Close all menus and you should see your location within Vespucci.
 
 Hopefully, these examples give you an idea of how to connect the RTK product line to most any GIS software. If there is other GIS software that you'd like to see configuration information about, please open an issue on the [RTK Firmware repo](https://github.com/sparkfun/SparkFun_RTK_Everywhere_Firmware/issues) and we'll add it.
 
-## What's an NTRIP Caster? 
+## What's an NTRIP Caster?
 
 In a nutshell, it's a server that is sending out correction data every second. There are thousands of sites around the globe that calculate the perturbations in the ionosphere and troposphere that decrease the accuracy of GNSS accuracy. Once the inaccuracies are known, correction values are encoded into data packets in the RTCM format. You, the user, don't need to know how to decode or deal with RTCM, you simply need to get RTCM from a source within 10km of your location into the RTK device. The NTRIP client logs into the server (also known as the NTRIP caster) and grabs that data, every second, and sends it over Bluetooth to the RTK device.
 
 ## Where do I get RTK Corrections?
 
-Be sure to see [Correction Sources](correction_sources.md). 
+Be sure to see [Correction Sources](correction_sources.md).
 
 Don't have access to an NTRIP Caster or other RTCM correction source? There are a few options.
 
 The [SparkFun RTK Facet L-Band](https://www.sparkfun.com/products/20000) gets corrections via an encrypted signal from geosynchronous satellites. This device gets RTK Fix without the need for a WiFi or cellular connection.
 
-Also, you can use a 2nd RTK product operating in Base mode to provide the correction data. Check out [Creating a Permanent Base](permanent_base.md). 
+Also, you can use a 2nd RTK product operating in Base mode to provide the correction data. Check out [Creating a Permanent Base](permanent_base.md).
 
-If you're the DIY sort, you can create your own low-cost base station using an ESP32 and a ZED-F9P breakout board. Check out [How to Build a DIY GNSS Reference Station](https://learn.sparkfun.com/tutorials/how-to-build-a-diy-gnss-reference-station). 
+If you're the DIY sort, you can create your own low-cost base station using an ESP32 and a ZED-F9P breakout board. Check out [How to Build a DIY GNSS Reference Station](https://learn.sparkfun.com/tutorials/how-to-build-a-diy-gnss-reference-station).
 
 There are services available as well. [Syklark](https://www.swiftnav.com/skylark) provides RTCM coverage for $49 a month (as of writing) and is extremely easy to set up and use. [Point One](https://app.pointonenav.com/trial?utm_source=sparkfun) also offers RTK NTRIP service with a free 14 day trial and easy to use front end.

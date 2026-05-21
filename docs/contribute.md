@@ -4,7 +4,7 @@ All of this documentation can be modified by you! Please help us make it better.
 
 ![Edit button on page](<img/Edit Page.png>)
 
-*The edit button at the top of every page*
+_The edit button at the top of every page_
 
 Does something not make sense? Find a typo? Hit the edit button and make it better. If a section is confusing please [open an issue](https://github.com/sparkfun/SparkFun_RTK_Firmware/issues) and let us know.
 

@@ -4,7 +4,7 @@ Surveyor: ![Feature Supported](img/Icons/GreenDot.png) / Express: ![Feature Supp
 
 ![Configuration menu open over Bluetooth](img/Bluetooth/SparkFun%20RTK%20BEM%20-%20Config%20Menu.png)
 
-*Configuration menu via Bluetooth*
+_Configuration menu via Bluetooth_
 
 Starting with firmware v3.0, Bluetooth-based configuration is supported. For more information about updating the firmware on your device, please see [Updating RTK Firmware](firmware_update.md).
 
@@ -20,7 +20,7 @@ Once connected, the RTK device will report a large amount of NMEA data over the 
 
 ![The GNSS message menu over BEM](img/Bluetooth/SparkFun%20RTK%20BEM%20-%20Config%20Menu.png)
 
-*The GNSS Messages menu shown over Bluetooth Echo Mode*
+_The GNSS Messages menu shown over Bluetooth Echo Mode_
 
 Once in Bluetooth Echo Mode, any character sent from the RTK unit will be shown in the Bluetooth app, and any character sent from the connected device (cell phone, laptop, etc) will be received by the RTK device. This allows the opening of the config menu as well as the viewing of all regular system output.
 
@@ -28,17 +28,17 @@ For more information about the Serial Config menu please see [Configure with Ser
 
 ![System output over Bluetooth](img/Bluetooth/SparkFun%20RTK%20BEM%20-%20System%20Output.png)
 
-*Exit from the Serial Config Menu*
+_Exit from the Serial Config Menu_
 
 Bluetooth can also be used to view system status and output. Simply exit the config menu using option 'x' and the system output can be seen.
 
 ## Exit Bluetooth Echo Mode
 
-To exit Bluetooth Echo Mode simply disconnect Bluetooth. In the Bluetooth Serial Terminal app, this is done by pressing the 'two plugs' icon in the upper right corner. 
+To exit Bluetooth Echo Mode simply disconnect Bluetooth. In the Bluetooth Serial Terminal app, this is done by pressing the 'two plugs' icon in the upper right corner.
 
 ![Exiting Bluetooth Echo Mode](img/Bluetooth/SparkFun%20RTK%20BEM%20-%20Exit%20BEM.png)
 
-*Menu option 'b' for exiting Bluetooth Echo Mode*
+_Menu option 'b' for exiting Bluetooth Echo Mode_
 
 Alternatively, if you wish to stay connected over Bluetooth but need to exit Bluetooth Echo Mode, use the 'b' menu option from the main menu.
 
@@ -48,12 +48,12 @@ Here we provide some settings recommendations to make the terminal navigation of
 
 ![Disable Time stamps](img/Bluetooth/SparkFun%20RTK%20BEM%20-%20Settings%20Terminal.png)
 
-*Terminal Settings with Timestamps disabled*
+_Terminal Settings with Timestamps disabled_
 
 Disable timestamps to make the window a bit wider, allowing the display of longer menu items without wrapping.
 
 ![Clear on send](img/Bluetooth/SparkFun%20RTK%20BEM%20-%20Settings.png)
 
-*Clear on send and echo off*
+_Clear on send and echo off_
 
 Clearing the input box when sending is very handy as well as turning off local echo.

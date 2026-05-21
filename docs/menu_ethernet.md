@@ -3,17 +3,17 @@
 Surveyor: ![Feature Not Supported](img/Icons/RedDot.png) / Express: ![Feature Not Supported](img/Icons/RedDot.png) / Express Plus: ![Feature Not Supported](img/Icons/RedDot.png) / Facet: ![Feature Not Supported](img/Icons/RedDot.png) / Facet L-Band: ![Feature Not Supported](img/Icons/RedDot.png) / Reference Station: ![Feature Supported](img/Icons/GreenDot.png)
 
 The Reference Station sends and receives NTRIP correction data via Ethernet. It can also send NMEA and RTCM navigation messages to an external TCP Server via Ethernet.
-It also has a dedicated Configure-Via-Ethernet (*Cfg Eth*) mode which is accessed via the MODE button and OLED display.
+It also has a dedicated Configure-Via-Ethernet (_Cfg Eth_) mode which is accessed via the MODE button and OLED display.
 
 By default, the Reference Station will use DHCP to request an IP Address from the network Gateway. But you can optionally configure it with a fixed IP Address.
 
 ![Reference Station in DHCP mode](img/Terminal/Ethernet_DHCP.png)
 
-*The Reference Station Ethernet menu - with DHCP selected*
+_The Reference Station Ethernet menu - with DHCP selected_
 
 ![Reference Station in fixed IP address mode](img/Terminal/Ethernet_Fixed_IP.png)
 
-*The Reference Station Ethernet menu - with a fixed IP address selected*
+_The Reference Station Ethernet menu - with a fixed IP address selected_
 
 ### Ethernet TCP Client
 

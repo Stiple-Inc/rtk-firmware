@@ -1,7 +1,7 @@
 name: Non-Release Build
-on: 
+on:
   workflow_dispatch:
-    branches: 
+    branches:
 
 env:
   FILENAME_PREFIX: RTK_Surveyor_Firmware
@@ -12,7 +12,6 @@ env:
 
 jobs:
   build:
-    
     name: Build
     runs-on: ubuntu-latest
 
@@ -35,12 +34,12 @@ jobs:
       #File_Name_RC-Jan_26_2023.bin
       - name: Create file ending and compiler flags based on branch
         run: |
-            echo "FILE_ENDING_UNDERSCORE=_RC-${{ steps.date.outputs.date }}" >> "$GITHUB_ENV"
-            echo "FILE_ENDING_NOUNDERSCORE=_RC-${{ steps.dateNoScores.outputs.dateNoScores }}" >> "$GITHUB_ENV"
-            echo "JSON_ENDING=-${{ steps.dateNoScores.outputs.dateNoScores }}" >> "$GITHUB_ENV"
-            echo "JSON_FILE_NAME=RTK-RC-Firmware.json" >> "$GITHUB_ENV"
-            echo "ENABLE_DEVELOPER=true" >> "$GITHUB_ENV"
-            echo "DEBUG_LEVEL=debug" >> "$GITHUB_ENV"
+          echo "FILE_ENDING_UNDERSCORE=_RC-${{ steps.date.outputs.date }}" >> "$GITHUB_ENV"
+          echo "FILE_ENDING_NOUNDERSCORE=_RC-${{ steps.dateNoScores.outputs.dateNoScores }}" >> "$GITHUB_ENV"
+          echo "JSON_ENDING=-${{ steps.dateNoScores.outputs.dateNoScores }}" >> "$GITHUB_ENV"
+          echo "JSON_FILE_NAME=RTK-RC-Firmware.json" >> "$GITHUB_ENV"
+          echo "ENABLE_DEVELOPER=true" >> "$GITHUB_ENV"
+          echo "DEBUG_LEVEL=debug" >> "$GITHUB_ENV"
 
       - name: Run Dockerfile and copy files
         # The --quiet suppresses the build output, keeping the secrets safe
@@ -85,7 +84,7 @@ jobs:
 
       - name: Upload artifact directory to action - avoid double-zip
         uses: actions/upload-artifact@v4
-        with: 
+        with:
           name: ${{ env.ARTIFACT }}
           path: ./Firmware/build/${{ env.ARTIFACT }}
           retention-days: 7

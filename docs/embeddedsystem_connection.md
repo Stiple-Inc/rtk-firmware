@@ -10,10 +10,10 @@ The **Data** port on the RTK Facet, Express, and Express Plus can be configured 
 
 Connect the included [4-pin JST to breadboard cable](https://www.sparkfun.com/products/17240) to the **Data** port. The cable has the following pinout:
 
-* **Red** - 3.3V
-* **Green** - TX (output from the RTK device)
-* **Orange** - RX (input into the RTK device)
-* **Black** - GND
+- **Red** - 3.3V
+- **Green** - TX (output from the RTK device)
+- **Orange** - RX (input into the RTK device)
+- **Black** - GND
 
 ![Wires connected to a SparkFun USB C to Serial adapter](img/SparkFun_RTK_Facet_-_Data_Port_to_USB.jpg)
 
@@ -37,8 +37,7 @@ The Reference Station provides direct access to the u-blox GNSS TX and RX signal
 
 ![Reference Station I/O screw terminals](img/SparkFun_GNSS_RTK_Reference_Station_IO.jpg)
 
-* TX2 : u-blox ZED-F9P UART2 transmit: 3.3V OUTPUT
-  
-* RX2 : u-blox ZED-F9P UART2 receive: 3.3V INPUT
+- TX2 : u-blox ZED-F9P UART2 transmit: 3.3V OUTPUT
+- RX2 : u-blox ZED-F9P UART2 receive: 3.3V INPUT
 
 Please see the [Reference Station Hookup Guide](https://learn.sparkfun.com/tutorials/sparkfun-rtk-reference-station-hookup-guide#hardware-overview) for more details.

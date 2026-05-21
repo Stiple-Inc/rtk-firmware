@@ -1,7 +1,7 @@
 name: Build RTK Firmware
-on: 
+on:
   workflow_dispatch:
-    branches: 
+    branches:
 
 env:
   FILENAME_PREFIX: RTK_Surveyor_Firmware
@@ -12,7 +12,6 @@ env:
 
 jobs:
   build:
-    
     name: Build
     runs-on: ubuntu-latest
 
@@ -88,10 +87,10 @@ jobs:
 
       - name: Upload binary to action
         uses: actions/upload-artifact@v4
-        with: 
+        with:
           name: ${{ env.FILENAME_PREFIX }}${{ env.FILE_ENDING_UNDERSCORE }}
           path: ./Firmware/build/${{ env.FILENAME_PREFIX }}${{ env.FILE_ENDING_UNDERSCORE }}.bin
-      
+
       - name: Push binary to Binaries Repo
         # uses: dmnemec/copy_file_to_another_repo_action #Workaround for Issue: https://github.com/orgs/community/discussions/55820#discussioncomment-5946136
         uses: Jason2866/copy_file_to_another_repo_action@http408_fix
@@ -99,11 +98,11 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_GITHUB_RTK_FILE_TOKEN }}
         with:
           source_file: ./Firmware/build/${{ env.FILENAME_PREFIX }}${{ env.FILE_ENDING_UNDERSCORE }}.bin
-          destination_repo: 'sparkfun/SparkFun_RTK_Firmware_Binaries'
-          destination_folder: ''
-          user_email: 'nathan@sparkfun.com'
-          user_name: 'nseidle'
-          commit_message: 'Github Action - Updating Binary ${{ steps.dateNoScores.outputs.dateNoScores }}'
+          destination_repo: "sparkfun/SparkFun_RTK_Firmware_Binaries"
+          destination_folder: ""
+          user_email: "nathan@sparkfun.com"
+          user_name: "nseidle"
+          commit_message: "Github Action - Updating Binary ${{ steps.dateNoScores.outputs.dateNoScores }}"
 
       - name: Update JSON File
         uses: "DamianReeves/write-file-action@master"
@@ -120,8 +119,8 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_GITHUB_RTK_FILE_TOKEN }}
         with:
           source_file: ${{ env.JSON_FILE_NAME }}
-          destination_repo: 'sparkfun/SparkFun_RTK_Firmware_Binaries'
-          destination_folder: ''
-          user_email: 'nathan@sparkfun.com'
-          user_name: 'nseidle'
-          commit_message: 'Github Action - Updating JSON ${{ steps.dateNoScores.outputs.dateNoScores }}'
+          destination_repo: "sparkfun/SparkFun_RTK_Firmware_Binaries"
+          destination_folder: ""
+          user_email: "nathan@sparkfun.com"
+          user_name: "nseidle"
+          commit_message: "Github Action - Updating JSON ${{ steps.dateNoScores.outputs.dateNoScores }}"
